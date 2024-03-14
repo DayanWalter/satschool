@@ -32,7 +32,7 @@ export default function Footer() {
           <h1 className='text-xl font-semibold mb-2'>Account</h1>
           <div className='flex flex-col'>
             <Link
-              className='text-primary underline-offset-4 hover:underline'
+              className='mb-2 text-primary underline-offset-4 hover:underline'
               href='/cart'
             >
               Cart
@@ -47,18 +47,35 @@ export default function Footer() {
         </div>
         <div className='border p-5'>
           <h1 className='text-xl font-semibold mb-2'>Quick Link</h1>
-          <Button asChild variant='link'>
-            <Link href='/privacy'>Privacy Policy</Link>
-          </Button>{" "}
-          <Button asChild variant='link'>
-            <Link href='/terms'>Terms Of Use</Link>
-          </Button>{" "}
-          <Button asChild variant='link'>
-            <Link href='/faq'>FAQ</Link>
-          </Button>{" "}
-          <Button asChild variant='link'>
-            <Link href='/contact'>Contact</Link>
-          </Button>{" "}
+          <div className='flex flex-col'>
+            <Link
+              className='mb-2 text-primary underline-offset-4 hover:underline'
+              href='/privacy'
+            >
+              Privacy Policy
+            </Link>
+
+            <Link
+              className='mb-2 text-primary underline-offset-4 hover:underline'
+              href='/terms'
+            >
+              Terms Of Use
+            </Link>
+
+            <Link
+              className='mb-2 text-primary underline-offset-4 hover:underline'
+              href='/faq'
+            >
+              FAQ
+            </Link>
+
+            <Link
+              className='mb-2 text-primary underline-offset-4 hover:underline'
+              href='/contact'
+            >
+              Contact
+            </Link>
+          </div>
         </div>
         <div className='border p-5'>
           <div>
