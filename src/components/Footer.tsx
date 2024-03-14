@@ -30,12 +30,20 @@ export default function Footer() {
         </div>
         <div className='border p-5'>
           <h1 className='text-xl font-semibold mb-2'>Account</h1>
-          <Button asChild variant='link'>
-            <Link href='/cart'>Cart</Link>
-          </Button>{" "}
-          <Button asChild variant='link'>
-            <Link href='/'>Shop</Link>
-          </Button>{" "}
+          <div className='flex flex-col'>
+            <Link
+              className='text-primary underline-offset-4 hover:underline'
+              href='/cart'
+            >
+              Cart
+            </Link>
+            <Link
+              className='text-primary underline-offset-4 hover:underline'
+              href='/'
+            >
+              Shop
+            </Link>
+          </div>
         </div>
         <div className='border p-5'>
           <h1 className='text-xl font-semibold mb-2'>Quick Link</h1>
