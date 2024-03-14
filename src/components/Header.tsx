@@ -11,8 +11,8 @@ export default function Header() {
   const [cartcount, setCartcount] = useState(2);
 
   return (
-    <div className='h-24  flex justify-between items-end pb-5 px-5 xl:px-20 border-b'>
-      <div className='hidden sm:block text-4xl font-bold'>SatSch</div>
+    <div className='flex  h-24 items-end justify-between border-b px-5 pb-5 xl:px-20'>
+      <div className='hidden text-4xl font-bold sm:block'>SatSch</div>
       <div className='flex sm:gap-10 xl:gap-20'>
         <Button asChild variant='link'>
           <Link href='/'>Home</Link>
@@ -31,7 +31,7 @@ export default function Header() {
           <Link href='/cart'>
             <div className='relative'>
               <Icon path={mdiCartOutline} size={1} />
-              <div className=' -top-2 -right-2 flex items-center justify-center rounded-full h-5 w-5 absolute bg-destructive text-destructive-foreground'>
+              <div className=' absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-destructive text-destructive-foreground'>
                 {cartcount}
               </div>
             </div>
