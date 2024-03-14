@@ -21,13 +21,15 @@ export default function Footer() {
           <Input type='text' placeholder='Enter your email' />
         </div>
         <div className='border p-5'>
-          <h1>Support</h1>
-          <p>Adress</p>
-          <p>Emaildress</p>
-          <p>Phone Number</p>
+          <h1 className='text-xl font-semibold mb-2'>Support</h1>
+          <p className='text-xs mb-2'>
+            25 Avenida Norte, San Salvador, El Salvador
+          </p>
+          <p className='text-xs mb-2'>juan.perez@example.com</p>
+          <p className='text-xs mb-2'>(+503) 2222-3333</p>
         </div>
         <div className='border p-5'>
-          <h1>Account</h1>
+          <h1 className='text-xl font-semibold mb-2'>Account</h1>
           <Button asChild variant='link'>
             <Link href='/cart'>Cart</Link>
           </Button>{" "}
@@ -36,7 +38,7 @@ export default function Footer() {
           </Button>{" "}
         </div>
         <div className='border p-5'>
-          <h1>Quick Link</h1>
+          <h1 className='text-xl font-semibold mb-2'>Quick Link</h1>
           <Button asChild variant='link'>
             <Link href='/privacy'>Privacy Policy</Link>
           </Button>{" "}
@@ -52,7 +54,7 @@ export default function Footer() {
         </div>
         <div className='border p-5'>
           <div>
-            <h1>Donate Developer</h1>
+            <h1 className='text-xl font-semibold mb-2'>Donate Developer</h1>
             <Icon path={mdiHeartOutline} size={1} />
           </div>
           <p>Send the developer some sats if you want</p>
