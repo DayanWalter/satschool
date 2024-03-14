@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SatSchool Fullstack Project
 
-## Getting Started
+SatSchool ist a full-stack project built with Next.js.
 
-First, run the development server:
+The frontend is built with React, Tailwind CSS and shadcn/ui.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The backend's purpose is to connect the frontend with Stripe.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Hosted on [vercel.com](https://vercel.com/).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Live Preview:[SatSchool](https://vercel.com/)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+SCREENSHOT
 
-## Learn More
+## About the project
 
-To learn more about Next.js, take a look at the following resources:
+SatSchool is an ecommerce site.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The user can choose between various Bitcoin-related courses and items, adjust the quantity of items in the shopping cart, and complete the payment using Stripe at the end of the shopping process.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Features
 
-## Deploy on Vercel
+- **Add Items to your cart:** Place your items in a shoppingcart and proceed to checkout after you have everything you need.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Pay with stripe:** Pay conveniently with [Stripe](https://stripe.com/).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Technologies used
+
+- Nextjs
+- React
+- Tailwind CSS
+- Shadcn/ui
+
+## Note
