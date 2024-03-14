@@ -33,7 +33,7 @@ export default function TopHeader() {
   return (
     <div className='h-12 bg-black text-white flex items-center justify-center'>
       <div className='flex gap-2'>
-        <p>SALE until</p>
+        <p className='hidden sm:block'>SALE until</p>
         <p className='text-red-600 font-semibold'>{countdown}</p>
         <p>- Free Express Delivery - 50% OFF</p>
       </div>
