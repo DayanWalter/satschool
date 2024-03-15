@@ -13,14 +13,14 @@ import { mdiLinkedin } from "@mdi/js";
 export default function Footer() {
   return (
     <>
-      <div className='flex min-h-96 flex-col dark:bg-black dark:text-white md:flex-row md:justify-between md:p-8'>
-        <div className='border p-5'>
+      <div className='flex border-t min-h-96 flex-col dark:bg-black dark:text-white md:flex-row md:justify-between md:p-8'>
+        <div className=' p-5'>
           <h1 className='mb-2 text-xl font-semibold'>SatSch</h1>
           <h2 className='mb-2 text-lg'>Subscribe</h2>
           <p className='mb-2 text-xs'>Get 10% off your first order</p>
           <Input type='text' placeholder='Enter your email' />
         </div>
-        <div className='border p-5'>
+        <div className=' p-5'>
           <h1 className='mb-2 text-xl font-semibold'>Support</h1>
           <p className='mb-2 text-xs'>
             25 Avenida Norte, San Salvador, El Salvador
@@ -28,7 +28,7 @@ export default function Footer() {
           <p className='mb-2 text-xs'>juan.perez@example.com</p>
           <p className='mb-2 text-xs'>(+503) 2222-3333</p>
         </div>
-        <div className='border p-5'>
+        <div className=' p-5'>
           <h1 className='mb-2 text-xl font-semibold'>Account</h1>
           <div className='flex flex-col'>
             <Link
@@ -45,7 +45,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className='border p-5'>
+        <div className=' p-5'>
           <h1 className='mb-2 text-xl font-semibold'>Quick Link</h1>
           <div className='flex flex-col'>
             <Link
@@ -77,7 +77,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className='border p-5'>
+        <div className=' p-5'>
           <div className='mb-2 flex gap-3'>
             <h1 className='text-xl font-semibold'>Donate Developer</h1>
             <Icon path={mdiHeartOutline} size={1} />
@@ -115,8 +115,12 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className='flex h-16 items-center justify-center border-t border-primary dark:bg-black dark:text-white'>
-        <p>COPY</p>
+      <div className=' text-gray-500 flex h-16 items-center justify-center border-t border-primary dark:bg-black dark:text-white'>
+        <p className='mr-1 hidden sm:block'>2024</p>
+        <Link href='https://dayanwalter.com/' target='_blank'>
+          <p className='mr-1 hidden sm:block'>Dayan Walter.</p>
+        </Link>
+        <p>This work is licensed under the MIT License.</p>
       </div>
     </>
   );
