@@ -21,7 +21,6 @@ import { mdiFacebook } from "@mdi/js";
 import { mdiTwitter } from "@mdi/js";
 import { mdiInstagram } from "@mdi/js";
 import { mdiLinkedin } from "@mdi/js";
-import { Button } from "./ui/button";
 
 export default function Footer() {
   return (
@@ -194,6 +193,7 @@ export default function Footer() {
           <p className='mb-2 text-xs'>Get 10% off your first order</p>
           <Input type='text' placeholder='Enter your email' />
         </div>
+
         {/* Support */}
         <div className='hidden lg:block p-5'>
           <h1 className='mb-2 text-xl font-semibold'>Support</h1>
@@ -203,6 +203,7 @@ export default function Footer() {
           <p className='mb-2 text-xs'>sat.nak@satsch.com</p>
           <p className='mb-2 text-xs'>(+503) 2222-3333</p>
         </div>
+
         {/* Account */}
         <div className='hidden lg:block max-w-sm p-5'>
           <h1 className='mb-2 text-xl font-semibold'>Account</h1>
@@ -218,6 +219,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
+
         {/* Quick Link */}
         <div className='hidden lg:block max-w-sm p-5'>
           <h1 className='mb-2 text-xl font-semibold'>Quick Link</h1>
@@ -251,6 +253,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
+
         {/* Donate Developer */}
         <div className='hidden lg:block w-72 p-5'>
           <div className='mb-2 flex gap-3'>

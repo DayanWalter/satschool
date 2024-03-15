@@ -38,10 +38,10 @@ export default function Header() {
             </div>
           </Link>
         </Button>
-      </div>
-      <div>
         <ModeToggle />
       </div>
+      {/* <div>
+      </div> */}
     </div>
   );
 }
