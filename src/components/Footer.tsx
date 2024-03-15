@@ -123,7 +123,7 @@ export default function Footer() {
           <AccordionItem value='donate-developer'>
             <AccordionTrigger>
               <div className='px-2 flex gap-2'>
-                <p>Donate Developer</p>
+                <p>Support the Developer</p>
                 <Icon color='red' path={mdiHeartOutline} size={1} />
               </div>
             </AccordionTrigger>
@@ -254,10 +254,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Donate Developer */}
+        {/* Support Developer */}
         <div className='hidden lg:block w-72 p-5'>
           <div className='mb-2 flex gap-3'>
-            <h1 className='text-xl font-semibold'>Donate Developer</h1>
+            <h1 className='text-xl font-semibold'>Support the Dev</h1>
             <Icon color='red' path={mdiHeartOutline} size={1} />
           </div>
           <p className='mb-2 text-xs'>
