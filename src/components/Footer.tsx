@@ -21,6 +21,7 @@ import { mdiFacebook } from "@mdi/js";
 import { mdiTwitter } from "@mdi/js";
 import { mdiInstagram } from "@mdi/js";
 import { mdiLinkedin } from "@mdi/js";
+import { Button } from "./ui/button";
 
 export default function Footer() {
   return (
@@ -30,41 +31,51 @@ export default function Footer() {
         <Accordion className='lg:hidden' type='single' collapsible>
           {/* Subscribe */}
           <AccordionItem value='subscribe'>
-            <AccordionTrigger>Subscribe</AccordionTrigger>
+            <AccordionTrigger>
+              <p className='px-2'>Subscribe</p>
+            </AccordionTrigger>
             <AccordionContent>
-              <p className='mb-2 text-xs'>Get 10% off your first order</p>
-              <Input
-                className='max-w-56'
-                type='text'
-                placeholder='Enter your email'
-              />
+              <div className='px-4'>
+                <p className='mb-2 text-xs'>Get 10% off your first order</p>
+                <Input
+                  className='max-w-56'
+                  type='text'
+                  placeholder='Enter your email'
+                />
+              </div>
             </AccordionContent>
           </AccordionItem>
 
           {/* Support */}
           <AccordionItem value='support'>
-            <AccordionTrigger>Support</AccordionTrigger>
+            <AccordionTrigger>
+              <p className='px-2'>Support</p>
+            </AccordionTrigger>
             <AccordionContent>
-              <p className=' text-xs'>25 Avenida Norte,</p>
-              <p className=' text-xs'>San Salvador,</p>
-              <p className='mb-2 text-xs'>El Salvador</p>
-              <p className='mb-2 text-xs'>sat.nak@satsch.com</p>
-              <p className='mb-2 text-xs'>(+503) 2222-3333</p>
+              <div className='px-4'>
+                <p className=' text-xs'>25 Avenida Norte,</p>
+                <p className=' text-xs'>San Salvador,</p>
+                <p className='mb-2 text-xs'>El Salvador</p>
+                <p className='mb-2 text-xs'>sat.nak@satsch.com</p>
+                <p className='mb-2 text-xs'>(+503) 2222-3333</p>
+              </div>
             </AccordionContent>
           </AccordionItem>
 
           {/* Account */}
           <AccordionItem value='account'>
-            <AccordionTrigger>Account</AccordionTrigger>
+            <AccordionTrigger>
+              <p className='px-2'>Account</p>
+            </AccordionTrigger>
             <AccordionContent>
-              <div className='flex flex-col '>
+              <div className='px-4 flex flex-col '>
                 <Link
                   className='mb-2  underline-offset-4 hover:underline'
                   href='/cart'
                 >
                   Cart
                 </Link>
-                <Link className=' underline-offset-4 hover:underline' href='/'>
+                <Link className='underline-offset-4 hover:underline' href='/'>
                   Shop
                 </Link>
               </div>
@@ -73,9 +84,11 @@ export default function Footer() {
 
           {/* Quick Link */}
           <AccordionItem value='quick-link'>
-            <AccordionTrigger>Quick Link</AccordionTrigger>
+            <AccordionTrigger>
+              <p className='px-2'>Quick Link</p>
+            </AccordionTrigger>
             <AccordionContent>
-              <div className='flex flex-col'>
+              <div className='px-4 flex flex-col'>
                 <Link
                   className='mb-2  underline-offset-4 hover:underline'
                   href='/privacy'
@@ -110,63 +123,65 @@ export default function Footer() {
           {/* Donate Developer */}
           <AccordionItem value='donate-developer'>
             <AccordionTrigger>
-              <div className='flex gap-2'>
+              <div className='px-2 flex gap-2'>
                 <p>Donate Developer</p>
                 <Icon color='red' path={mdiHeartOutline} size={1} />
               </div>
             </AccordionTrigger>
             <AccordionContent>
-              <p className='mb-2 text-xs'>
-                Send the developer some sats if you want
-              </p>
-              <div className='w-72 mb-6 flex'>
-                <div className='w-1/2 flex justify-center'>
-                  <div className='w-24 h-24 relative '>
-                    <Image
-                      fill
-                      sizes='100px'
-                      priority
-                      src='/lnadress.jpg'
-                      alt=''
-                    />
+              <div className='px-4 '>
+                <p className='mb-2 text-xs'>
+                  Send the developer some sats if you want
+                </p>
+                <div className='w-72 mb-6 flex'>
+                  <div className='w-1/2 flex justify-center'>
+                    <div className='w-24 h-24 relative '>
+                      <Image
+                        fill
+                        sizes='100px'
+                        priority
+                        src='/lnadress.jpg'
+                        alt=''
+                      />
+                    </div>
+                  </div>
+
+                  <div className='flex w-1/2 flex-col items-center justify-center'>
+                    <div className=' relative w-24 h-12'>
+                      <Link
+                        className=' absolute w-full h-full'
+                        href='https://google.com/'
+                        target='_blank'
+                      >
+                        <Image fill src='/google.svg' alt='' />
+                      </Link>
+                    </div>
+                    <div className='relative w-24 h-12'>
+                      <Link
+                        className=' absolute w-full h-full'
+                        href='https://apple.com/'
+                        target='_blank'
+                      >
+                        <Image fill src='/apple.svg' alt='' />
+                      </Link>
+                    </div>
                   </div>
                 </div>
 
-                <div className='flex w-1/2 flex-col items-center justify-center'>
-                  <div className=' relative w-24 h-12'>
-                    <Link
-                      className=' absolute w-full h-full'
-                      href='https://google.com/'
-                      target='_blank'
-                    >
-                      <Image fill src='/google.svg' alt='' />
-                    </Link>
-                  </div>
-                  <div className='relative w-24 h-12'>
-                    <Link
-                      className=' absolute w-full h-full'
-                      href='https://apple.com/'
-                      target='_blank'
-                    >
-                      <Image fill src='/apple.svg' alt='' />
-                    </Link>
-                  </div>
+                <div className='flex justify-between'>
+                  <Link href='https://facebook.com/' target='_blank'>
+                    <Icon path={mdiFacebook} size={1} />
+                  </Link>
+                  <Link href='https://x.com/' target='_blank'>
+                    <Icon path={mdiTwitter} size={1} />
+                  </Link>
+                  <Link href='https://instagram.com/' target='_blank'>
+                    <Icon path={mdiInstagram} size={1} />
+                  </Link>
+                  <Link href='https://linkedin.com/' target='_blank'>
+                    <Icon path={mdiLinkedin} size={1} />
+                  </Link>
                 </div>
-              </div>
-
-              <div className='flex justify-between'>
-                <Link href='https://facebook.com/' target='_blank'>
-                  <Icon path={mdiFacebook} size={1} />
-                </Link>
-                <Link href='https://x.com/' target='_blank'>
-                  <Icon path={mdiTwitter} size={1} />
-                </Link>
-                <Link href='https://instagram.com/' target='_blank'>
-                  <Icon path={mdiInstagram} size={1} />
-                </Link>
-                <Link href='https://linkedin.com/' target='_blank'>
-                  <Icon path={mdiLinkedin} size={1} />
-                </Link>
               </div>
             </AccordionContent>
           </AccordionItem>
