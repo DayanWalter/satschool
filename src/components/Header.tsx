@@ -32,7 +32,7 @@ export default function Header() {
           <Link href='/cart'>
             <div className='relative'>
               <Icon path={mdiCartOutline} size={1} />
-              <div className=' absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-destructive text-destructive-foreground'>
+              <div className=' absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-600 text-white'>
                 {cartcount}
               </div>
             </div>
