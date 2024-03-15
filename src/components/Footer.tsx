@@ -1,15 +1,26 @@
+// React
 import React from "react";
-import { Button } from "./ui/button";
-import { Input } from "@/components/ui/input";
 
+// Next
 import Link from "next/link";
+import Image from "next/image";
+
+// Shadcn
+import { Input } from "@/components/ui/input";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+// Icons
 import Icon from "@mdi/react";
 import { mdiHeartOutline } from "@mdi/js";
 import { mdiFacebook } from "@mdi/js";
 import { mdiTwitter } from "@mdi/js";
 import { mdiInstagram } from "@mdi/js";
 import { mdiLinkedin } from "@mdi/js";
-import Image from "next/image";
 
 export default function Footer() {
   return (
