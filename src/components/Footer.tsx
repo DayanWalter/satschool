@@ -86,35 +86,78 @@ export default function Footer() {
         </div>
         {/* Quick Link */}
         <div className=' max-w-sm p-5'>
-          <h1 className='mb-2 text-xl font-semibold'>Quick Link</h1>
-          <div className='flex flex-col'>
-            <Link
-              className='mb-2  underline-offset-4 hover:underline'
-              href='/privacy'
-            >
-              Privacy Policy
-            </Link>
+          <div className='lg:hidden'>
+            <Accordion type='single' collapsible>
+              <AccordionItem value='item-1'>
+                <AccordionTrigger>
+                  <h1 className=' font-semibold'>Quick Link</h1>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <Link
+                    className='mb-2  underline-offset-4 hover:underline'
+                    href='/privacy'
+                  >
+                    Privacy Policy
+                  </Link>
+                </AccordionContent>
+                <AccordionContent>
+                  <Link
+                    className='mb-2  underline-offset-4 hover:underline'
+                    href='/terms'
+                  >
+                    Terms Of Use
+                  </Link>
+                </AccordionContent>
+                <AccordionContent>
+                  <Link
+                    className='mb-2  underline-offset-4 hover:underline'
+                    href='/faq'
+                  >
+                    FAQ
+                  </Link>
+                </AccordionContent>
+                <AccordionContent>
+                  <Link
+                    className='mb-2  underline-offset-4 hover:underline'
+                    href='/contact'
+                  >
+                    Contact
+                  </Link>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+          <div className='hidden lg:block'>
+            <h1 className='mb-2 text-xl font-semibold'>Quick Link</h1>
+            <div className='flex flex-col'>
+              <Link
+                className='mb-2  underline-offset-4 hover:underline'
+                href='/privacy'
+              >
+                Privacy Policy
+              </Link>
 
-            <Link
-              className='mb-2  underline-offset-4 hover:underline'
-              href='/terms'
-            >
-              Terms Of Use
-            </Link>
+              <Link
+                className='mb-2  underline-offset-4 hover:underline'
+                href='/terms'
+              >
+                Terms Of Use
+              </Link>
 
-            <Link
-              className='mb-2  underline-offset-4 hover:underline'
-              href='/faq'
-            >
-              FAQ
-            </Link>
+              <Link
+                className='mb-2  underline-offset-4 hover:underline'
+                href='/faq'
+              >
+                FAQ
+              </Link>
 
-            <Link
-              className='mb-2  underline-offset-4 hover:underline'
-              href='/contact'
-            >
-              Contact
-            </Link>
+              <Link
+                className='mb-2  underline-offset-4 hover:underline'
+                href='/contact'
+              >
+                Contact
+              </Link>
+            </div>
           </div>
         </div>
         {/* Donate Developer */}
