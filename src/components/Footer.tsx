@@ -44,17 +44,44 @@ export default function Footer() {
         </div>
         {/* Account */}
         <div className=' max-w-sm p-5'>
-          <h1 className='mb-2 text-xl font-semibold'>Account</h1>
-          <div className='flex flex-col '>
-            <Link
-              className='mb-2  underline-offset-4 hover:underline'
-              href='/cart'
-            >
-              Cart
-            </Link>
-            <Link className=' underline-offset-4 hover:underline' href='/'>
-              Shop
-            </Link>
+          <div className='lg:hidden'>
+            <Accordion type='single' collapsible>
+              <AccordionItem value='item-1'>
+                <AccordionTrigger>
+                  <h1 className=' font-semibold'>Account</h1>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <Link
+                    className='mb-2  underline-offset-4 hover:underline'
+                    href='/cart'
+                  >
+                    Cart
+                  </Link>
+                </AccordionContent>
+                <AccordionContent>
+                  <Link
+                    className=' underline-offset-4 hover:underline'
+                    href='/'
+                  >
+                    Shop
+                  </Link>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+          <div className='hidden lg:block'>
+            <h1 className='mb-2 text-xl font-semibold'>Account</h1>
+            <div className='flex flex-col '>
+              <Link
+                className='mb-2  underline-offset-4 hover:underline'
+                href='/cart'
+              >
+                Cart
+              </Link>
+              <Link className=' underline-offset-4 hover:underline' href='/'>
+                Shop
+              </Link>
+            </div>
           </div>
         </div>
         {/* Quick Link */}
