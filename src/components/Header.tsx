@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import Icon from "@mdi/react";
 import { mdiCartOutline } from "@mdi/js";
+import { ModeToggle } from "./ModeToggle";
 
 export default function Header() {
   const [cartcount, setCartcount] = useState(2);
@@ -37,6 +38,9 @@ export default function Header() {
             </div>
           </Link>
         </Button>
+      </div>
+      <div>
+        <ModeToggle />
       </div>
     </div>
   );

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+
 import "./globals.css";
 import TopHeader from "@/components/TopHeader";
 import Header from "@/components/Header";
@@ -20,10 +22,17 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        {/* <TopHeader /> */}
-        {/* <Header /> */}
-        {/* {children} */}
-        <Footer />
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
+          <TopHeader />
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
