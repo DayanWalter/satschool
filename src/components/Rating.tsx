@@ -11,11 +11,20 @@ const Rating: React.FC<RatingProps> = ({ rating }) => {
     const hasHalfStar = rating % 1 !== 0;
 
     for (let i = 0; i < fullStars; i++) {
-      stars.push(<Icon key={i} path={mdiStar} size={1} />);
+      stars.push(
+        <Icon key={i} className='text-primary' path={mdiStar} size={1} />
+      );
     }
 
     if (hasHalfStar) {
-      stars.push(<Icon key='half' path={mdiStarHalfFull} size={1} />);
+      stars.push(
+        <Icon
+          key='half'
+          className='text-primary'
+          path={mdiStarHalfFull}
+          size={1}
+        />
+      );
     }
 
     const remainingStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
@@ -23,6 +32,7 @@ const Rating: React.FC<RatingProps> = ({ rating }) => {
       stars.push(
         <Icon
           key={i + fullStars + (hasHalfStar ? 1 : 0)}
+          className='text-primary'
           path={mdiStarOutline}
           size={1}
         />
