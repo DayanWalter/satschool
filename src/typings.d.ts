@@ -1,11 +1,18 @@
 interface Product {
   id: number;
-  name: string;
-  picture: string;
+  title: string;
   price: number;
-  rating: number;
-  numberOfRatings: number;
+  image: string;
+  rating: {
+    rate: number;
+    count: number;
+  };
 }
 interface RatingProps {
   rating: number;
+}
+interface FetchProductsResult {
+  data: Product[] | null;
+  error: Error | null;
+  loading: boolean;
 }

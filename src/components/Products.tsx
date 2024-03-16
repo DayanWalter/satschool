@@ -1,52 +1,27 @@
+"use client";
 import React from "react";
 import Icon from "@mdi/react";
 import { mdiArrowLeft } from "@mdi/js";
 import { mdiArrowRight } from "@mdi/js";
 import ProductCard from "./ProductCard";
+import useFetchProducts from "@/hooks/useFetchProducts";
 
 export default function Products() {
-  const products: Product[] = [
-    {
-      id: 1,
-      name: "Item1",
-      picture: "image_url",
-      price: 12.99,
-      rating: 1.5,
-      numberOfRatings: 20,
-    },
-    {
-      id: 2,
-      name: "Item2",
-      picture: "image_url",
-      price: 1.99,
-      rating: 3,
-      numberOfRatings: 20,
-    },
-    {
-      id: 3,
-      name: "Item3",
-      picture: "image_url",
-      price: 10.99,
-      rating: 4,
-      numberOfRatings: 20,
-    },
-    {
-      id: 4,
-      name: "Item4",
-      picture: "image_url",
-      price: 15.99,
-      rating: 4,
-      numberOfRatings: 20,
-    },
-    {
-      id: 5,
-      name: "Item5",
-      picture: "image_url",
-      price: 17.99,
-      rating: 4,
-      numberOfRatings: 20,
-    },
-  ];
+  const { data: products, error, loading } = useFetchProducts();
+
+  // const products: Product[] = [
+  //   {
+  //     id: 1,
+  //     title: "Item1",
+  //     price: 12.99,
+  //     image: "image_url",
+  //     rating: {
+  //       rate: 3.5,
+  //       count: 21,
+  //     },
+  //   },
+  // ];
+
   return (
     <div className='w-full flex flex-col'>
       {/* Header section */}
@@ -68,15 +43,19 @@ export default function Products() {
         </div>
       </div>
       {/* Product section */}
-      <div>
-        <ul className='border grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
-          {products.map((product) => (
-            <li key={product.id}>
-              <ProductCard product={product} />
-            </li>
-          ))}
-        </ul>
-      </div>
+      {loading && <div>Loading...</div>}
+      {error && <div>Error</div>}
+      {products && (
+        <div>
+          <ul className='border grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
+            {products.map((product: Product) => (
+              <li key={product.id}>
+                <ProductCard product={product} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
