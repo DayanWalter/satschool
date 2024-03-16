@@ -39,6 +39,7 @@ export default function Footer() {
                 <Input
                   className='max-w-56'
                   type='text'
+                  name='accordionEmailfield'
                   placeholder='Enter your email'
                 />
               </div>
@@ -191,7 +192,7 @@ export default function Footer() {
           <h1 className='mb-2 text-xl font-semibold'>SatSch</h1>
           <h2 className='mb-2 text-lg'>Subscribe</h2>
           <p className='mb-2 text-xs'>Get 10% off your first order</p>
-          <Input type='text' placeholder='Enter your email' />
+          <Input type='text' name='emailfield' placeholder='Enter your email' />
         </div>
 
         {/* Support */}

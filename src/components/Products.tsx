@@ -70,9 +70,9 @@ export default function Products() {
       {/* Product section */}
       <div className='border grid grid-cols-4'>
         {products.map((product) => (
-          <>
-            <ProductCard key={product.id} product={product} />
-          </>
+          <div key={product.id}>
+            <ProductCard product={product} />
+          </div>
         ))}
       </div>
     </div>

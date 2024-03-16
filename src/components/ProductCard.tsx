@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
-    <div>
+    <>
       <div>
         <p>{product.picture}</p>
       </div>
@@ -12,6 +12,6 @@ export default function ProductCard({ product }: { product: Product }) {
         <p>{product.rating}</p>
         <p>{product.numberOfRatings}</p>
       </div>
-    </div>
+    </>
   );
 }
