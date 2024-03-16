@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 export default function useFetchProducts() {
   // Hooks
-  const [data, setData] = useState<Product[] | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<Error | null>(null);
+  const [data, setData] = useState<ProductData>(null);
+  const [loading, setLoading] = useState<LoadingData>(true);
+  const [error, setError] = useState<ErrorData>(null);
 
   // Effect
   useEffect(() => {

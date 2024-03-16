@@ -1,11 +1,12 @@
 import React from "react";
 import Rating from "./Rating";
+import Image from "next/image";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (
     <div className='border flex flex-col justify-between  h-80 '>
       <div className=' h-64 bg-gray-100 rounded'>
-        <p>{product.image}</p>
+        <Image src={product.image} alt='product image' fill />
       </div>
       <div className=''>
         <h2 className='font-semibold '>{product.title}</h2>

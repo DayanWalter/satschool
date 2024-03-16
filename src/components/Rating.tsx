@@ -4,9 +4,9 @@ import { mdiStarOutline } from "@mdi/js";
 import { mdiStarHalfFull } from "@mdi/js";
 import { mdiStar } from "@mdi/js";
 
-const Rating: React.FC<RatingProps> = ({ rating }) => {
-  const renderStars = (): JSX.Element[] => {
-    const stars: JSX.Element[] = [];
+const Rating = ({ rating }: { rating: number }) => {
+  const renderStars = () => {
+    const stars = [];
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
 

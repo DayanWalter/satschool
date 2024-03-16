@@ -8,11 +8,13 @@ interface Product {
     count: number;
   };
 }
-interface RatingProps {
-  rating: number;
-}
+
 interface FetchProductsResult {
   data: Product[] | null;
   error: Error | null;
   loading: boolean;
 }
+
+type ProductData = Product[] | null;
+type LoadingData = boolean;
+type ErrorData = Error | null;
