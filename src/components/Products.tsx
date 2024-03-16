@@ -11,7 +11,7 @@ export default function Products() {
       name: "Item1",
       picture: "image_url",
       price: 12.99,
-      rating: 3,
+      rating: 1.5,
       numberOfRatings: 20,
     },
     {
@@ -68,12 +68,14 @@ export default function Products() {
         </div>
       </div>
       {/* Product section */}
-      <div className='border grid grid-cols-4'>
-        {products.map((product) => (
-          <div key={product.id}>
-            <ProductCard product={product} />
-          </div>
-        ))}
+      <div>
+        <ul className='border grid grid-cols-4'>
+          {products.map((product) => (
+            <li key={product.id}>
+              <ProductCard product={product} />
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

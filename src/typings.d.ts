@@ -6,3 +6,6 @@ interface Product {
   rating: number;
   numberOfRatings: number;
 }
+interface RatingProps {
+  rating: number;
+}
