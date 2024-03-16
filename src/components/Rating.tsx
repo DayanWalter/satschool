@@ -12,18 +12,18 @@ const Rating = ({ rating }: { rating: number }) => {
 
     for (let i = 0; i < fullStars; i++) {
       stars.push(
-        <Icon key={i} className='text-primary' path={mdiStar} size={1} />
+        <Icon key={i} className="text-primary" path={mdiStar} size={1} />,
       );
     }
 
     if (hasHalfStar) {
       stars.push(
         <Icon
-          key='half'
-          className='text-primary'
+          key="half"
+          className="text-primary"
           path={mdiStarHalfFull}
           size={1}
-        />
+        />,
       );
     }
 
@@ -32,10 +32,10 @@ const Rating = ({ rating }: { rating: number }) => {
       stars.push(
         <Icon
           key={i + fullStars + (hasHalfStar ? 1 : 0)}
-          className='text-primary'
+          className="text-primary"
           path={mdiStarOutline}
           size={1}
-        />
+        />,
       );
     }
 

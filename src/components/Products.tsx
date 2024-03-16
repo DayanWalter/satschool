@@ -23,20 +23,20 @@ export default function Products() {
   // ];
 
   return (
-    <div className='w-full flex flex-col'>
+    <div className="flex w-full flex-col">
       {/* Header section */}
-      <div className='border mb-14'>
-        <div className='flex items-center gap-5 mb-5'>
-          <div className='bg-primary rounded h-10 w-5'></div>
-          <p className='text-primary font-semibold '>Our Products</p>
+      <div className="mb-14 ">
+        <div className="mb-5 flex items-center gap-5">
+          <div className="h-10 w-5 rounded bg-primary"></div>
+          <p className="font-semibold text-primary ">Our Products</p>
         </div>
-        <div className='flex justify-between'>
-          <h1 className='text-4xl font-semibold'>Explore our Products</h1>
-          <div className='flex gap-2'>
-            <div className=' flex justify-center items-center rounded-full bg-gray-200 w-12 h-12'>
+        <div className="flex justify-between">
+          <h1 className="text-4xl font-semibold">Explore our Products</h1>
+          <div className="flex gap-2">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-200">
               <Icon path={mdiArrowLeft} size={1.5} />
             </div>
-            <div className='flex justify-center items-center rounded-full bg-gray-200 w-12 h-12'>
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-200">
               <Icon path={mdiArrowRight} size={1.5} />
             </div>
           </div>
@@ -47,7 +47,7 @@ export default function Products() {
       {error && <div>Error</div>}
       {products && (
         <div>
-          <div className='border grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
+          <div className="grid grid-cols-1 gap-8   md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {products.map((product: Product) => (
               <ProductCard key={product.id} product={product} />
             ))}
