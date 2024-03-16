@@ -2,11 +2,55 @@ import React from "react";
 import Icon from "@mdi/react";
 import { mdiArrowLeft } from "@mdi/js";
 import { mdiArrowRight } from "@mdi/js";
+import ProductCard from "./ProductCard";
 
 export default function Products() {
+  const products: Product[] = [
+    {
+      id: 1,
+      name: "Item1",
+      picture: "url",
+      price: 12.99,
+      rating: 3,
+      numberOfRatings: 20,
+    },
+    {
+      id: 2,
+      name: "Item2",
+      picture: "url",
+      price: 1.99,
+      rating: 3,
+      numberOfRatings: 20,
+    },
+    {
+      id: 3,
+      name: "Item3",
+      picture: "url",
+      price: 10.99,
+      rating: 4,
+      numberOfRatings: 20,
+    },
+    {
+      id: 4,
+      name: "Item4",
+      picture: "url",
+      price: 15.99,
+      rating: 4,
+      numberOfRatings: 20,
+    },
+    {
+      id: 5,
+      name: "Item5",
+      picture: "url",
+      price: 17.99,
+      rating: 4,
+      numberOfRatings: 20,
+    },
+  ];
   return (
     <div className='w-full flex flex-col'>
-      <div className='border'>
+      {/* Header section */}
+      <div className='border mb-14'>
         <div className='flex items-center gap-5 mb-5'>
           <div className='bg-primary rounded h-10 w-5'></div>
           <p className='text-primary font-semibold '>Our Products</p>
@@ -23,8 +67,14 @@ export default function Products() {
           </div>
         </div>
       </div>
-
-      <div className='border'>grid with products</div>
+      {/* Product section */}
+      <div className='border grid grid-cols-4'>
+        {products.map((product) => (
+          <div key={product.id}>
+            <ProductCard product={product} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
