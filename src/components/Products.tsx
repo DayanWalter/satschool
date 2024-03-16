@@ -9,7 +9,7 @@ export default function Products() {
     {
       id: 1,
       name: "Item1",
-      picture: "url",
+      picture: "image_url",
       price: 12.99,
       rating: 3,
       numberOfRatings: 20,
@@ -17,7 +17,7 @@ export default function Products() {
     {
       id: 2,
       name: "Item2",
-      picture: "url",
+      picture: "image_url",
       price: 1.99,
       rating: 3,
       numberOfRatings: 20,
@@ -25,7 +25,7 @@ export default function Products() {
     {
       id: 3,
       name: "Item3",
-      picture: "url",
+      picture: "image_url",
       price: 10.99,
       rating: 4,
       numberOfRatings: 20,
@@ -33,7 +33,7 @@ export default function Products() {
     {
       id: 4,
       name: "Item4",
-      picture: "url",
+      picture: "image_url",
       price: 15.99,
       rating: 4,
       numberOfRatings: 20,
@@ -41,7 +41,7 @@ export default function Products() {
     {
       id: 5,
       name: "Item5",
-      picture: "url",
+      picture: "image_url",
       price: 17.99,
       rating: 4,
       numberOfRatings: 20,
@@ -70,9 +70,9 @@ export default function Products() {
       {/* Product section */}
       <div className='border grid grid-cols-4'>
         {products.map((product) => (
-          <div key={product.id}>
-            <ProductCard product={product} />
-          </div>
+          <>
+            <ProductCard key={product.id} product={product} />
+          </>
         ))}
       </div>
     </div>
