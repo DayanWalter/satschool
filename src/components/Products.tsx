@@ -5,7 +5,6 @@ import { mdiArrowLeft } from "@mdi/js";
 import { mdiArrowRight } from "@mdi/js";
 import ProductCard from "./ProductCard";
 import useFetchProducts from "@/hooks/useFetchProducts";
-import { CarouselDemo } from "./carousel";
 
 export default function Products() {
   const { data: products, error, loading } = useFetchProducts();
@@ -32,20 +31,19 @@ export default function Products() {
           <p className="font-semibold text-primary ">Our Products</p>
         </div>
         <div className=" flex flex-col justify-between md:flex-row ">
-          <h1 className="mb-5 text-4xl font-semibold ">Explore our Products</h1>
-          <div className="flex gap-2">
+          <h1 className=" text-4xl font-semibold ">Explore our Products</h1>
+          {/* <div className="flex gap-2">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-200">
               <Icon path={mdiArrowLeft} size={1.5} />
             </div>
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-200">
               <Icon path={mdiArrowRight} size={1.5} />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       {/* Product section */}
-      <CarouselDemo />
-      {/* {loading && <div>Loading...</div>}
+      {loading && <div>Loading...</div>}
       {error && <div>Error</div>}
       {products && (
         <div>
@@ -55,7 +53,7 @@ export default function Products() {
             ))}
           </div>
         </div>
-      )} */}
+      )}
     </div>
   );
 }
