@@ -11,6 +11,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { useCart } from "@/components/CartContext";
+import Image from "next/image";
 
 export default function Cart() {
   const { cart, incrementQuantity, decrementQuantity, removeFromCart } =
@@ -27,6 +28,16 @@ export default function Cart() {
       removeFromCart(productId);
     }
   };
+  const truncateTitle = (title: string, maxLength: number) => {
+    return title.length > maxLength
+      ? title.substring(0, maxLength) + "..."
+      : title;
+  };
+  const calculateSubTotal = (product: Product) => {
+    const subTotal = product.quantityInCart * product.price;
+    return subTotal.toFixed(2);
+  };
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="flex w-full flex-col">
@@ -46,7 +57,7 @@ export default function Cart() {
         {/* Cart Content */}
         <div>
           {/* Cart Header */}
-          <div className="flex justify-between border">
+          <div className="mb-5 grid grid-cols-4 rounded border px-5 py-2">
             <p>Product</p>
             <p>Price</p>
             <p>Quantity</p>
@@ -55,16 +66,27 @@ export default function Cart() {
           {/* Cart Item */}
 
           {cart.map((product) => (
-            <div key={product.id} className="flex justify-between border">
+            <div
+              key={product.id}
+              className="mb-2 grid grid-cols-4 rounded border p-5"
+            >
               {/* Product */}
-              <div className="flex gap-1">
-                <p>Icon</p>
-                <p>{product.title}</p>
+              <div className="flex items-center gap-3">
+                <div className="relative h-12 w-12 ">
+                  <Image
+                    src={product.image}
+                    alt="product image"
+                    sizes="100%"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <p>{truncateTitle(product.title, 20)}</p>
               </div>
               {/* Price */}
               <p>${product.price.toFixed(2)}</p>
               {/* Quantity */}
-              <div className="flex items-center rounded border">
+              <div className="flex w-16 items-center justify-between rounded border px-3 ">
                 <p>{product.quantityInCart}</p>
                 <div className="flex flex-col">
                   <button onClick={() => handleIncrement(product.id)}>+</button>
@@ -72,7 +94,7 @@ export default function Cart() {
                 </div>
               </div>
               {/* Subtotal */}
-              <p>${product.price * product.quantityInCart}</p>
+              <p>${calculateSubTotal(product)}</p>
             </div>
           ))}
         </div>
