@@ -16,6 +16,17 @@ export default function Cart() {
   const { cart, incrementQuantity, decrementQuantity, removeFromCart } =
     useCart();
 
+  const handleIncrement = (productId: number) => {
+    incrementQuantity(productId);
+  };
+
+  const handleDecrement = (productId: number) => {
+    decrementQuantity(productId);
+    const product = cart.find((item: Product) => item.id === productId);
+    if (product && product.quantityInCart === 0) {
+      removeFromCart(productId);
+    }
+  };
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="flex w-full flex-col">
@@ -56,14 +67,12 @@ export default function Cart() {
               <div className="flex items-center rounded border">
                 <p>{product.quantityInCart}</p>
                 <div className="flex flex-col">
-                  <button>+</button>
-                  <button>-</button>
+                  <button onClick={() => handleIncrement(product.id)}>+</button>
+                  <button onClick={() => handleDecrement(product.id)}>-</button>
                 </div>
               </div>
               {/* Subtotal */}
-              <p>
-                ${product.price.toFixed(2)} x {product.quantityInCart}
-              </p>
+              <p>${product.price * product.quantityInCart}</p>
             </div>
           ))}
         </div>
