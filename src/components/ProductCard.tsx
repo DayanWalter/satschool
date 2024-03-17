@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import Rating from "./Rating";
 import Image from "next/image";
+import { useCart } from "./CartContext";
 
 export default function ProductCard({ product }: { product: Product }) {
   const [isHovered, setIsHovered] = useState(false);
+  const { addToCart, cart } = useCart();
+  const isProductInCart = cart.some((item) => item.id === product.id);
 
+  console.log(cart);
   return (
     <div className=" flex h-80 flex-col justify-between ">
       <div
@@ -22,8 +26,17 @@ export default function ProductCard({ product }: { product: Product }) {
           />
         </div>
         {isHovered && (
-          <button className=" absolute bottom-0 w-full rounded-b bg-primary px-4 py-2 text-primary-foreground text-white transition duration-300 hover:bg-primary/90">
-            Add To Cart
+          <button
+            onClick={() => {
+              addToCart(product);
+            }}
+            className={`absolute bottom-0 w-full rounded-b  px-4 py-2   transition duration-300  ${
+              isProductInCart
+                ? "cursor-not-allowed bg-gray-400 text-gray-600"
+                : "bg-primary text-primary-foreground hover:bg-primary/90"
+            } `}
+          >
+            {isProductInCart ? "Added To Cart" : "Add To Cart"}
           </button>
         )}
       </div>

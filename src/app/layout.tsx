@@ -6,6 +6,7 @@ import "./globals.css";
 import TopHeader from "@/components/TopHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { CartProvider } from "@/components/CartContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,14 +21,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider attribute='class' defaultTheme='system'>
-          <TopHeader />
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
+        <CartProvider>
+          <ThemeProvider attribute="class" defaultTheme="system">
+            <TopHeader />
+            <Header />
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </CartProvider>
       </body>
     </html>
   );
