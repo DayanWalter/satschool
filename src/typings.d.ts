@@ -3,6 +3,7 @@ interface Product {
   title: string;
   price: number;
   image: string;
+  quantityInCart: number;
   rating: {
     rate: number;
     count: number;
