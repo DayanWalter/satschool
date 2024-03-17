@@ -32,14 +32,6 @@ export default function Products() {
         </div>
         <div className=" flex flex-col justify-between md:flex-row ">
           <h1 className=" text-4xl font-semibold ">Explore our Products</h1>
-          {/* <div className="flex gap-2">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-200">
-              <Icon path={mdiArrowLeft} size={1.5} />
-            </div>
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-200">
-              <Icon path={mdiArrowRight} size={1.5} />
-            </div>
-          </div> */}
         </div>
       </div>
       {/* Product section */}
