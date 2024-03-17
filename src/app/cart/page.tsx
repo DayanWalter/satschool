@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Slash } from "lucide-react";
 
@@ -9,8 +10,12 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { useCart } from "@/components/CartContext";
 
 export default function Cart() {
+  const { cart, incrementQuantity, decrementQuantity, removeFromCart } =
+    useCart();
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="flex w-full flex-col">
@@ -37,25 +42,30 @@ export default function Cart() {
             <p>Subtotal</p>
           </div>
           {/* Cart Item */}
-          <div className="flex justify-between border">
-            {/* Product */}
-            <div className="flex gap-1">
-              <p>Icon</p>
-              <p>title</p>
-            </div>
-            {/* Price */}
-            <p>$300</p>
-            {/* Quantity */}
-            <div className="flex items-center rounded border">
-              <p>5</p>
-              <div className="flex flex-col">
-                <button>+</button>
-                <button>-</button>
+
+          {cart.map((product) => (
+            <div key={product.id} className="flex justify-between border">
+              {/* Product */}
+              <div className="flex gap-1">
+                <p>Icon</p>
+                <p>{product.title}</p>
               </div>
+              {/* Price */}
+              <p>${product.price.toFixed(2)}</p>
+              {/* Quantity */}
+              <div className="flex items-center rounded border">
+                <p>{product.quantityInCart}</p>
+                <div className="flex flex-col">
+                  <button>+</button>
+                  <button>-</button>
+                </div>
+              </div>
+              {/* Subtotal */}
+              <p>
+                ${product.price.toFixed(2)} x {product.quantityInCart}
+              </p>
             </div>
-            {/* Subtotal */}
-            <p>$1500</p>
-          </div>
+          ))}
         </div>
       </div>
       Cart Page

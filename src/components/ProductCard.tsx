@@ -8,7 +8,6 @@ export default function ProductCard({ product }: { product: Product }) {
   const { addToCart, cart } = useCart();
   const isProductInCart = cart.some((item) => item.id === product.id);
 
-  console.log(cart);
   return (
     <div className=" flex h-80 flex-col justify-between ">
       <div
