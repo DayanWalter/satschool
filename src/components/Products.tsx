@@ -30,7 +30,7 @@ export default function Products() {
           <div className="h-10 w-5 rounded bg-primary"></div>
           <p className="font-semibold text-primary ">Our Products</p>
         </div>
-        <div className="flex justify-between">
+        <div className=" flex justify-between ">
           <h1 className="text-4xl font-semibold">Explore our Products</h1>
           <div className="flex gap-2">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-200">
