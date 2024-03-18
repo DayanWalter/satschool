@@ -28,11 +28,7 @@ export default function Cart() {
       removeFromCart(productId);
     }
   };
-  const truncateTitle = (title: string, maxLength: number) => {
-    return title.length > maxLength
-      ? title.substring(0, maxLength) + "..."
-      : title;
-  };
+
   const calculateSubTotal = (product: Product) => {
     const subTotal = product.quantityInCart * product.price;
     return subTotal.toFixed(2);
@@ -81,7 +77,7 @@ export default function Cart() {
                     className="object-contain"
                   />
                 </div>
-                <p>{truncateTitle(product.title, 20)}</p>
+                <p className="truncate">{product.title}</p>
               </div>
               {/* Price */}
               <p>${product.price.toFixed(2)}</p>
