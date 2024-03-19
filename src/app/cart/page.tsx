@@ -24,6 +24,7 @@ import {
 import { useCart } from "@/components/CartContext";
 import Image from "next/image";
 import CheckoutButton from "./CheckoutButton";
+import CartTotalCard from "./CartTotalCard";
 
 export default function Cart() {
   const { cart, incrementQuantity, decrementQuantity, removeFromCart } =
@@ -50,7 +51,7 @@ export default function Cart() {
       (total, product) => total + product.price * product.quantityInCart,
       0,
     );
-    return totalAmount.toFixed(2);
+    return totalAmount;
   };
 
   return (
@@ -128,12 +129,14 @@ export default function Cart() {
               <TableRow>
                 <TableCell colSpan={3}>Total</TableCell>
                 <TableCell className="text-right">
-                  ${calculateTotalAmount()}
+                  ${calculateTotalAmount().toFixed(2)}
                 </TableCell>
               </TableRow>
             </TableFooter>
           </Table>
-          <CheckoutButton />
+          <div className="flex justify-end">
+            <CartTotalCard subtotal={calculateTotalAmount()} />
+          </div>
         </div>
       </main>
     </>
