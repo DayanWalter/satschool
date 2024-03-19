@@ -84,15 +84,17 @@ export default function Cart() {
             {cart.map((product) => (
               <TableRow key={product.id}>
                 <TableCell className="font-medium">
-                  <div className="flex items-center gap-3">
-                    <div className="relative h-12 w-12 ">
-                      <Image
-                        src={product.image}
-                        alt="product image"
-                        sizes="100%"
-                        fill
-                        className="object-contain"
-                      />
+                  <div className="flex items-center gap-3 ">
+                    <div className=" rounded border bg-white p-1">
+                      <div className="relative h-12 w-12">
+                        <Image
+                          src={product.image}
+                          alt="product image"
+                          sizes="100%"
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
                     </div>
                     <p className="truncate">{product.title}</p>
                   </div>
