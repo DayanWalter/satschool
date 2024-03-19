@@ -149,12 +149,22 @@ export default function Cart() {
               </TableRow>
             </TableFooter>
           </Table>
-          <button
-            onClick={checkout}
-            className="mt-2 rounded border border-black px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2"
-          >
-            Buy now
-          </button>
+
+          {cart.length ? (
+            <button
+              onClick={checkout}
+              className="mt-2 rounded border border-black px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2 "
+            >
+              Buy now
+            </button>
+          ) : (
+            <button
+              disabled={true}
+              className="mt-2 cursor-not-allowed rounded border border-black bg-gray-400 px-4 py-2 text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:ring-offset-2"
+            >
+              Your cart is empty
+            </button>
+          )}
         </div>
       </main>
     </>
