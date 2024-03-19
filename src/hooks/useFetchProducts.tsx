@@ -12,7 +12,7 @@ export default function useFetchProducts() {
       try {
         setLoading(true);
         const response = await fetch(
-          `https://fakestoreapi.com/products?limit=8`
+          `https://fakestoreapi.com/products?limit=8`,
         );
 
         if (!response.ok) {
@@ -29,7 +29,6 @@ export default function useFetchProducts() {
     }
     fetchData();
   }, []);
-  console.log(data);
 
   return { data, loading, error };
 }
