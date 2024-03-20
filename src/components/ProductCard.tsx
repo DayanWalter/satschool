@@ -43,7 +43,7 @@ export default function ProductCard({ product }: { product: Product }) {
       <div className="">
         <h2 className="font-semibold ">{product.title}</h2>
         <div className="flex items-center gap-2">
-          <p className="text-red-600">${product.price}</p>
+          <p className="text-red-600">${product.price.toFixed(2)}</p>
           <Rating rating={product.rating.rate} />
           <p className="text-sm text-gray-400">({product.rating.count})</p>
         </div>

@@ -17,16 +17,20 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   const [cart, setCart] = useState<Product[]>([]);
-
   const addToCart = (product: Product) => {
     const updatedCart = [...cart];
 
     const existingProduct = updatedCart.find((item) => item.id === product.id);
+    const normalizedPrice = Number(product.price.toFixed(2));
 
     if (existingProduct) {
       existingProduct.quantityInCart += 1;
     } else {
-      updatedCart.push({ ...product, quantityInCart: 1 });
+      updatedCart.push({
+        ...product,
+        quantityInCart: 1,
+        price: normalizedPrice,
+      });
     }
 
     setCart(updatedCart);

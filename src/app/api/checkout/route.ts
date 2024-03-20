@@ -25,7 +25,7 @@ export const POST = async (request: any) => {
         const prod = await stripe.products.create({
           name: product.title,
           default_price_data: {
-            unit_amount: product.price * 100,
+            unit_amount: Math.round(product.price * 100),
             currency: "usd",
           },
         });
@@ -51,7 +51,6 @@ export const POST = async (request: any) => {
       });
     }
   }
-
   const session = await stripe.checkout.sessions.create({
     line_items: stripeItems,
     mode: "payment",

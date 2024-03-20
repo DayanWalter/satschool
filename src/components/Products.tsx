@@ -7,20 +7,98 @@ import ProductCard from "./ProductCard";
 import useFetchProducts from "@/hooks/useFetchProducts";
 
 export default function Products() {
-  const { data: products, error, loading } = useFetchProducts();
+  // const { data: products, error, loading } = useFetchProducts();
 
-  // const products: Product[] = [
-  //   {
-  //     id: 1,
-  //     title: "Item1",
-  //     price: 12.99,
-  //     image: "image_url",
-  //     rating: {
-  //       rate: 3.5,
-  //       count: 21,
-  //     },
-  //   },
-  // ];
+  const products: Product[] = [
+    {
+      id: 1,
+      title: "Introduction to Bitcoin",
+      price: 199.99,
+      image: "/introduction-to-bitcoin.png",
+      quantityInCart: 0,
+      rating: {
+        rate: 4.8,
+        count: 150,
+      },
+    },
+    {
+      id: 2,
+      title: "Advanced Bitcoin Techniques",
+      price: 299.99,
+      image: "/advanced-bitcoin-techniques.png",
+      quantityInCart: 0,
+      rating: {
+        rate: 4.9,
+        count: 85,
+      },
+    },
+    {
+      id: 3,
+      title: "Understanding the Lightning Network",
+      price: 249.99,
+      image: "/understanding-the-lightning-network.png",
+      quantityInCart: 0,
+      rating: {
+        rate: 4.7,
+        count: 120,
+      },
+    },
+    {
+      id: 4,
+      title: "Bitcoin Mining Basics",
+      price: 219.99,
+      image: "/bitcoin-mining-basics.png",
+      quantityInCart: 0,
+      rating: {
+        rate: 4.5,
+        count: 95,
+      },
+    },
+    {
+      id: 5,
+      title: "Security in the Bitcoin Ecosystem",
+      price: 259.99,
+      image: "/security-in-the-bitcoin-ecosystem.png",
+      quantityInCart: 0,
+      rating: {
+        rate: 4.8,
+        count: 110,
+      },
+    },
+    {
+      id: 6,
+      title: "Developing Bitcoin Applications",
+      price: 319.99,
+      image: "/developing-bitcoin-applications.png",
+      quantityInCart: 0,
+      rating: {
+        rate: 4.6,
+        count: 78,
+      },
+    },
+    {
+      id: 7,
+      title: "Investing in Bitcoin",
+      price: 279.99,
+      image: "/investing-in-bitcoin.png",
+      quantityInCart: 0,
+      rating: {
+        rate: 4.7,
+        count: 142,
+      },
+    },
+    {
+      id: 8,
+      title: "Legal Aspects of Bitcoin",
+      price: 299.99,
+      image: "/legal-aspects-of-bitcoin.png",
+      quantityInCart: 0,
+      rating: {
+        rate: 4.5,
+        count: 89,
+      },
+    },
+  ];
 
   return (
     <div className="flex w-full flex-col">
@@ -35,8 +113,8 @@ export default function Products() {
         </div>
       </div>
       {/* Product section */}
-      {loading && <div>Loading...</div>}
-      {error && <div>Error</div>}
+      {/* {loading && <div>Loading...</div>} */}
+      {/* {error && <div>Error</div>} */}
       {products && (
         <div>
           <div className="grid grid-cols-1 gap-8   md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

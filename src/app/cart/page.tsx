@@ -44,14 +44,14 @@ export default function Cart() {
 
   const calculateSubTotal = (product: Product) => {
     const subTotal = product.quantityInCart * product.price;
-    return subTotal.toFixed(2);
+    return Number(subTotal.toFixed(2));
   };
   const calculateTotalAmount = () => {
     const totalAmount = cart.reduce(
       (total, product) => total + product.price * product.quantityInCart,
       0,
     );
-    return totalAmount;
+    return Number(totalAmount.toFixed(2));
   };
 
   return (
@@ -105,7 +105,7 @@ export default function Cart() {
                       <p className="truncate">{product.title}</p>
                     </div>
                   </TableCell>
-                  <TableCell>${product.price.toFixed(2)}</TableCell>
+                  <TableCell>${product.price}</TableCell>
                   <TableCell>
                     <div className="flex w-16 items-center justify-between rounded border px-3 ">
                       <p>{product.quantityInCart}</p>
@@ -129,7 +129,7 @@ export default function Cart() {
               <TableRow>
                 <TableCell colSpan={3}>Total</TableCell>
                 <TableCell className="text-right">
-                  ${calculateTotalAmount().toFixed(2)}
+                  ${calculateTotalAmount()}
                 </TableCell>
               </TableRow>
             </TableFooter>
