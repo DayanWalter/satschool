@@ -21,18 +21,18 @@ export default function CartTotalCard({ subtotal }: { subtotal: number }) {
       <CardContent>
         <div className="mb-5 flex justify-between">
           <p>Subtotal:</p>
-          <p>${subtotal}</p>
+          <p>${subtotal.toFixed(2)}</p>
         </div>
 
         <Separator />
         <div className="my-5 flex justify-between">
           <p>Shipping:</p>
-          <p>Always Free :)</p>
+          <p>Free :)</p>
         </div>
         <Separator />
         <div className="mt-5 flex justify-between">
           <p>Total:</p>
-          <p>${subtotal}</p>
+          <p>${subtotal.toFixed(2)}</p>
         </div>
       </CardContent>
       <CardFooter className="flex justify-center">

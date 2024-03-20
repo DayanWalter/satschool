@@ -77,7 +77,7 @@ export default function Cart() {
 
           {/* Cart Content */}
           <Table>
-            <TableCaption>A list of your items in your cart</TableCaption>
+            <TableCaption>A list of items in your cart</TableCaption>
             <TableHeader>
               <TableRow>
                 <TableHead className="w-[100px]">Product</TableHead>
@@ -105,7 +105,7 @@ export default function Cart() {
                       <p className="truncate">{product.title}</p>
                     </div>
                   </TableCell>
-                  <TableCell>${product.price}</TableCell>
+                  <TableCell>${product.price.toFixed(2)}</TableCell>
                   <TableCell>
                     <div className="flex w-16 items-center justify-between rounded border px-3 ">
                       <p>{product.quantityInCart}</p>
@@ -120,7 +120,7 @@ export default function Cart() {
                     </div>
                   </TableCell>
                   <TableCell className="text-right">
-                    ${calculateSubTotal(product)}
+                    ${calculateSubTotal(product).toFixed(2)}
                   </TableCell>
                 </TableRow>
               ))}
@@ -129,7 +129,7 @@ export default function Cart() {
               <TableRow>
                 <TableCell colSpan={3}>Total</TableCell>
                 <TableCell className="text-right">
-                  ${calculateTotalAmount()}
+                  ${calculateTotalAmount().toFixed(2)}
                 </TableCell>
               </TableRow>
             </TableFooter>
