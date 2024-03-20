@@ -10,6 +10,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import ContactCard from "./ContactCard";
 
 export default function Contact() {
   return (
@@ -31,13 +32,7 @@ export default function Contact() {
         </Breadcrumb>
       </div>
       <main className="flex min-h-screen flex-col items-center justify-between p-5 lg:p-24">
-        <div>
-          <h1 className="mb-5 text-4xl font-semibold">SUCCESS!</h1>
-          <p>Your items will be shipped immediately!</p>
-          <p>
-            Thank you for actively participating in the evolution of mankind :)
-          </p>
-        </div>
+        <ContactCard />
       </main>
     </>
   );
