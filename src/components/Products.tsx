@@ -13,12 +13,12 @@ export default function Products() {
     {
       id: 1,
       title: "Introduction to Bitcoin",
-      price: 199.99,
+      price: 21,
       image: "/introduction-to-bitcoin.png",
       quantityInCart: 0,
       rating: {
         rate: 4.8,
-        count: 150,
+        count: 3125,
       },
     },
     {
@@ -29,7 +29,7 @@ export default function Products() {
       quantityInCart: 0,
       rating: {
         rate: 4.9,
-        count: 85,
+        count: 625,
       },
     },
     {
@@ -40,7 +40,7 @@ export default function Products() {
       quantityInCart: 0,
       rating: {
         rate: 4.7,
-        count: 120,
+        count: 125,
       },
     },
     {
@@ -51,7 +51,7 @@ export default function Products() {
       quantityInCart: 0,
       rating: {
         rate: 4.5,
-        count: 95,
+        count: 25,
       },
     },
     {
@@ -62,18 +62,18 @@ export default function Products() {
       quantityInCart: 0,
       rating: {
         rate: 4.8,
-        count: 110,
+        count: 50,
       },
     },
     {
       id: 6,
       title: "Developing Bitcoin Applications",
-      price: 319.99,
+      price: 329.99,
       image: "/developing-bitcoin-applications.png",
       quantityInCart: 0,
       rating: {
         rate: 4.6,
-        count: 78,
+        count: 21,
       },
     },
     {
@@ -84,7 +84,7 @@ export default function Products() {
       quantityInCart: 0,
       rating: {
         rate: 4.7,
-        count: 142,
+        count: 2009,
       },
     },
     {
@@ -95,7 +95,7 @@ export default function Products() {
       quantityInCart: 0,
       rating: {
         rate: 4.5,
-        count: 89,
+        count: 10,
       },
     },
   ];

@@ -13,15 +13,15 @@ export default function ProductCard({ product }: { product: Product }) {
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className=" relative flex h-64 items-center justify-center rounded border bg-white "
+        className=" relative flex h-64 items-center justify-center overflow-hidden rounded border bg-white "
       >
-        <div className="relative h-5/6 w-1/2 ">
+        <div className="relative size-full ">
           <Image
             src={product.image}
             alt="product image"
             sizes="100%"
             fill
-            className="object-contain"
+            className=" object-cover"
           />
         </div>
         {isHovered && (
