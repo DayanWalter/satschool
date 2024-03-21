@@ -84,7 +84,7 @@ export default function ContactForm() {
 
   return (
     <>
-      <Card className="md:w-[550px] ">
+      <Card className="md:w-[550px]">
         <CardHeader>
           <CardTitle>Contact us</CardTitle>
         </CardHeader>

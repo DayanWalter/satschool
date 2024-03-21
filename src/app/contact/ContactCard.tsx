@@ -22,6 +22,16 @@ export default function ContactCard() {
           <p>Email: sat.nak@satsch.com</p>
         </CardContent>
       </Card>
+      <Card className="md:w-[550px] lg:w-[350px]">
+        <CardHeader>
+          <CardTitle>Visit us</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p>25 Avenida Norte,</p>
+          <p>San Salvador,</p>
+          <p>El Salvador</p>
+        </CardContent>
+      </Card>
     </div>
   );
 }
