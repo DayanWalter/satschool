@@ -29,7 +29,7 @@ export default function Privacy() {
         </Breadcrumb>
       </div>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <div className="mx-auto max-w-3xl rounded bg-white p-8 shadow">
+        <div className="mx-auto max-w-3xl rounded  p-8 shadow">
           <h1 className="mb-4 text-3xl font-bold">Privacy Policy</h1>
           <p className="mb-4">
             Here you can find information about how we handle your personal
