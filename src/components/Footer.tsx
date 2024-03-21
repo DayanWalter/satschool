@@ -25,7 +25,7 @@ import { mdiLinkedin } from "@mdi/js";
 export default function Footer() {
   return (
     <>
-      <div className="flex min-h-96 flex-col border-t  lg:flex-row lg:justify-between lg:px-16 lg:py-12">
+      <div className="flex min-h-96 flex-col border-t  bg-black text-white lg:flex-row lg:justify-between lg:px-16 lg:py-12">
         {/* Accordion */}
         <Accordion className="lg:hidden" type="single" collapsible>
           {/* Subscribe */}
@@ -309,7 +309,7 @@ export default function Footer() {
         </div>
       </div>
       {/* Licence */}
-      <div className="flex  h-16 items-center justify-center text-sm lg:border-t ">
+      <div className="flex  h-16 items-center justify-center bg-black text-sm text-white lg:border-t ">
         <p className="mr-1 hidden sm:block">2024</p>
         <Link href="https://dayanwalter.com/" target="_blank">
           <p className="mr-1 hidden sm:block">Dayan Walter.</p>

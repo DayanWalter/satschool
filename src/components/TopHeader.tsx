@@ -31,7 +31,7 @@ export default function TopHeader() {
   }, []);
 
   return (
-    <div className="flex h-12 items-center justify-center border-b">
+    <div className="flex h-12 items-center justify-center border-b bg-black text-white">
       <div className="flex gap-2">
         <p className="hidden sm:block">SALE until</p>
         <p className="font-semibold text-red-600">{countdown}</p>
