@@ -9,6 +9,12 @@ interface Product {
     count: number;
   };
 }
+interface Statistic {
+  id: number;
+  icon: string;
+  number: number;
+  description: string;
+}
 
 interface FetchProductsResult {
   data: Product[] | null;

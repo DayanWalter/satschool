@@ -10,6 +10,8 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import AboutHeader from "./AboutHeader";
+import AboutStatistics from "./AboutStatistics";
 
 export default function About() {
   return (
@@ -31,9 +33,12 @@ export default function About() {
         </Breadcrumb>
       </div>
       <main className="flex min-h-screen flex-col items-center justify-between p-5 lg:p-24">
-        <div className="flex w-full flex-col justify-around space-y-5 md:items-center lg:flex-row lg:-space-y-0">
-          About
+        {/* <div className="flex w-full flex-col justify-around space-y-5 md:items-center lg:flex-row lg:-space-y-0"> */}
+        <div className="flex flex-col items-center gap-10 lg:gap-32">
+          <AboutHeader />
+          <AboutStatistics />
         </div>
+        {/* </div> */}
       </main>
     </>
   );
