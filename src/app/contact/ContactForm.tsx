@@ -1,84 +1,140 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React from "react";
 import emailjs from "@emailjs/browser";
-import Popup from "./Popup";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { Button } from "@/components/ui/button";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
+import { toast } from "@/components/ui/use-toast";
 
 export default function ContactForm() {
-  const form = useRef();
-  const [popup, setPopup] = useState(false);
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm("service_2n1b8f9", "template_chhw3en", form.current, {
-        publicKey: "N21MnRLlPBPVc0mQf",
+  const formSchema = z.object({
+    username: z
+      .string()
+      .min(2, {
+        message: "Name must be at least 2 characters.",
       })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        },
-      );
-    setPopup(true);
-    e.target.reset();
-    setTimeout(() => {
-      setPopup(false);
-    }, 2000);
-  };
+      .max(50, {
+        message: "Name must not be longer than 50 characters.",
+      }),
+    useremail: z.string().email().min(5, {
+      message: "Email must be at least 5 characters.",
+    }),
+    usermessage: z
+      .string()
+      .min(10, {
+        message: "Message must be at least 10 characters.",
+      })
+      .max(160, {
+        message: "Message must not be longer than 160 characters.",
+      }),
+  });
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      username: "",
+      useremail: "",
+      usermessage: "",
+    },
+  });
+
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    form.reset();
+    toast({
+      title: "You submitted successfully your message",
+      description: "We will reach out to you within the next 24 hours.",
+    });
+    // Real implementation:
+    // emailjs
+    //   .send("service_2n1b8f9", "template_chhw3en", values, {
+    //     publicKey: "N21MnRLlPBPVc0mQf",
+    //   })
+    //   .then(
+    //     () => {
+    //       console.log("SUCCESS!");
+    //       form.reset();
+    //       toast({
+    //         title: "You submitted successfully your message",
+    //         description: "We will reach out to you within the next 24 hours.",
+    //       });
+    //     },
+    //     (error) => {
+    //       console.log("FAILED...", error.text);
+    //       toast({
+    //         variant: "destructive",
+    //         title: "Uh oh! Something went wrong.",
+    //         description: "There was a problem with your request.",
+    //       });
+    //     },
+    //   );
+  }
+
   return (
     <>
-      <form
-        className="mt-6 flex w-full flex-col items-start justify-start"
-        name="contact"
-        ref={form}
-        onSubmit={sendEmail}
-      >
-        <label htmlFor="user_name" className="mb-5 w-full max-w-sm">
-          Name:
-          <span className="text-red-500">*</span>
-          <input
-            id="user_name"
-            className="mt-2 w-full rounded-sm border border-gray-400 px-2 py-1 shadow-sm ring-transparent ring-offset-2 ring-offset-blue-400/20 focus:border-blue-400 focus:outline-none focus:ring dark:text-black"
-            type="text"
-            required
-            autoComplete="true"
-            name="user_name"
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <FormField
+            control={form.control}
+            name="username"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Name</FormLabel>
+                <FormControl>
+                  <Input placeholder="Satoshi Nakamoto" {...field} />
+                </FormControl>
+                <FormDescription>This is your name.</FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
           />
-        </label>
-        <label htmlFor="user_email" className="mb-5 w-full max-w-sm">
-          Email:
-          <span className="text-red-500">*</span>
-          <input
-            id="user_email"
-            className="mt-2 w-full rounded-sm border border-gray-400 px-2 py-1 shadow-sm ring-transparent ring-offset-2 ring-offset-blue-400/20 focus:border-blue-400 focus:outline-none focus:ring dark:text-black"
-            type="email"
-            required
-            autoComplete="true"
-            name="user_email"
+          <FormField
+            control={form.control}
+            name="useremail"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Email</FormLabel>
+                <FormControl>
+                  <Input placeholder="example@mail.com" {...field} />
+                </FormControl>
+                <FormDescription>This is your email adress.</FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
           />
-        </label>
-        <label htmlFor="user_message" className="mb-5 w-full max-w-sm">
-          Message:
-          <span className="text-red-500">*</span>
-          <textarea
-            className="mt-2 w-full rounded-sm border border-gray-400 px-2 py-1 shadow-sm ring-transparent ring-offset-2 ring-offset-blue-400/20 focus:border-blue-400 focus:outline-none focus:ring dark:text-black"
-            name="user_message"
-            id="user_message"
-            rows={8}
-            required
-          ></textarea>
-        </label>
-        <button
-          type="submit"
-          className="rounded-lg bg-primary px-4 py-2 font-medium text-white hover:bg-primary/80"
-        >
-          Send Message
-        </button>
-      </form>
-      {popup ? <Popup /> : ""}
+
+          <FormField
+            control={form.control}
+            name="usermessage"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Message</FormLabel>
+                <FormControl>
+                  <Textarea
+                    placeholder="How can we help you?"
+                    className="resize-none"
+                    {...field}
+                  />
+                </FormControl>
+                <FormDescription>This is your message for us.</FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <Button type="submit">Submit</Button>
+        </form>
+      </Form>
     </>
   );
 }
