@@ -33,8 +33,10 @@ export default function Contact() {
         </Breadcrumb>
       </div>
       <main className="flex min-h-screen flex-col items-center justify-between p-5 lg:p-24">
-        <ContactCard />
-        <ContactForm />
+        <div className="flex w-full flex-col justify-around space-y-5 md:items-center lg:flex-row lg:-space-y-0">
+          <ContactCard />
+          <ContactForm />
+        </div>
       </main>
     </>
   );
