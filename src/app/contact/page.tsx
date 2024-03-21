@@ -11,6 +11,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import ContactCard from "./ContactCard";
+import ContactForm from "./ContactForm";
 
 export default function Contact() {
   return (
@@ -33,6 +34,7 @@ export default function Contact() {
       </div>
       <main className="flex min-h-screen flex-col items-center justify-between p-5 lg:p-24">
         <ContactCard />
+        <ContactForm />
       </main>
     </>
   );
