@@ -71,9 +71,9 @@ export default function FAQ() {
                 <div className="px-4">
                   <ul>
                     <li>Enter the following:</li>
-                    <li>"4242 4242 4242 4242" as credit card.</li>
-                    <li>"12/34" as MM/YY.</li>
-                    <li>"123" as CVC.</li>
+                    <li>&quot;4242 4242 4242 4242&quot; as credit card.</li>
+                    <li>&quot;12/34&quot; as MM/YY.</li>
+                    <li>&quot;123&quot; as CVC.</li>
                     <li>
                       Choose an arbitrary email and card owner and click on pay.
                     </li>
