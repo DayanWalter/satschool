@@ -8,13 +8,13 @@ import { useCart } from "@/components/CartContext";
 import { Button } from "@/components/ui/button";
 
 export default function CheckoutButton() {
-  const url = process.env.VERCEL_URL;
+  // const url = process.env.VERCEL_URL;
 
   const { cart } = useCart();
 
   const checkout = async () => {
     try {
-      const response = await fetch(`${url}/api/checkout`, {
+      const response = await fetch(`${process.env.VERCEL_URL}/api/checkout`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ products: cart }),
