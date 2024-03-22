@@ -1,6 +1,6 @@
 // Next
 import { NextResponse } from "next/server";
-const url = process.env.BASE_URL;
+const url = process.env.VERCEL_URL;
 const stripe = require("stripe")(process.env.STRIPE_SECRET);
 
 const getActiveProducts = async () => {
@@ -56,8 +56,8 @@ export const POST = async (request: any) => {
   const session = await stripe.checkout.sessions.create({
     line_items: stripeItems,
     mode: "payment",
-    success_url: `${process.env.BASE_URL}/success`,
-    cancel_url: `${process.env.BASE_URL}/cancel`,
+    success_url: `${url}/success`,
+    cancel_url: `${url}/cancel`,
   });
 
   return NextResponse.json({ url: session.url });
