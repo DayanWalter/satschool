@@ -72,7 +72,7 @@ export default function Cart() {
           </BreadcrumbList>
         </Breadcrumb>
       </div>
-      <main className="flex min-h-screen flex-col items-center justify-between p-5 lg:px-24">
+      <main className="flex min-h-full flex-col items-center justify-between p-5 lg:px-24">
         {/* Cart Content */}
         <Table>
           <TableCaption>A list of items in your cart</TableCaption>

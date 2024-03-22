@@ -32,7 +32,7 @@ export default function About() {
           </BreadcrumbList>
         </Breadcrumb>
       </div>
-      <main className="flex min-h-screen flex-col items-center justify-between p-5 lg:p-24">
+      <main className="flex min-h-full flex-col items-center justify-between p-5 lg:p-24">
         {/* <div className="flex w-full flex-col justify-around space-y-5 md:items-center lg:flex-row lg:-space-y-0"> */}
         <div className="flex flex-col items-center gap-10 lg:gap-32">
           <AboutHeader />

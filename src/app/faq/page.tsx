@@ -40,8 +40,8 @@ export default function FAQ() {
           </BreadcrumbList>
         </Breadcrumb>
       </div>
-      <main className="flex min-h-screen flex-col items-center justify-between p-5 lg:p-24">
-        <Card className="w-5/6 lg:w-[650px]">
+      <main className="flex min-h-full flex-col items-center justify-between p-5 lg:p-24">
+        <Card className="w-full sm:w-5/6 lg:w-[650px]">
           <Accordion type="single" collapsible>
             <AccordionItem value="realshop">
               <AccordionTrigger>

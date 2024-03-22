@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Rating from "./Rating";
 import Image from "next/image";
 import { useCart } from "./CartContext";
+import { toast } from "./ui/use-toast";
 
 export default function ProductCard({ product }: { product: Product }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -28,6 +29,10 @@ export default function ProductCard({ product }: { product: Product }) {
           <button
             onClick={() => {
               addToCart(product);
+              toast({
+                title: "Added to your cart!",
+                description: `The Course "${product.title}" was added.`,
+              });
             }}
             className={`absolute bottom-0 w-full rounded-b  px-4 py-2   transition duration-300  ${
               isProductInCart
