@@ -20,6 +20,10 @@ import { toast } from "@/components/ui/use-toast";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function ContactForm() {
+  // const serviceEmailjs = process.env.SERVICE_EMAILJS;
+  // const templateEmailjs = process.env.TEMPLATE_EMAILJS;
+  // const pubkeyEmailjs = process.env.PUBKEY_EMAILJS;
+
   const formSchema = z.object({
     username: z
       .string()
@@ -59,8 +63,8 @@ export default function ContactForm() {
     });
     // Real implementation:
     // emailjs
-    //   .send("service_2n1b8f9", "template_chhw3en", values, {
-    //     publicKey: "N21MnRLlPBPVc0mQf",
+    //   .send(serviceEmailjs, templateEmailjs, values, {
+    //     publicKey: pubkeyEmailjs,
     //   })
     //   .then(
     //     () => {

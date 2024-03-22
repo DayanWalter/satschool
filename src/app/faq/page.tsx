@@ -110,8 +110,25 @@ export default function FAQ() {
               </AccordionTrigger>
               <AccordionContent>
                 <div className="px-4">
-                  No, it is not wired to a service. Look at the repo, there are
-                  comments about how you could do it.
+                  No, it is not wired to a service. Look at the{" "}
+                  <Link
+                    className="mb-2  underline underline-offset-4"
+                    href="https://github.com/DayanWalter/satschool/blob/722d0ed17934ff65a7567a121e021524d8c03a6d/src/app/contact/ContactForm.tsx#L60"
+                    target="_blank"
+                  >
+                    repo
+                  </Link>
+                  , there are comments about how you could do it.
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="subscribe">
+              <AccordionTrigger>
+                <p className="px-2">Can I subscribe to a newsletter?</p>
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="px-4">
+                  No your emailadress does not leave this site.
                 </div>
               </AccordionContent>
             </AccordionItem>

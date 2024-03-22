@@ -1,3 +1,4 @@
+"use client";
 // React
 import React from "react";
 
@@ -21,8 +22,16 @@ import { mdiFacebook } from "@mdi/js";
 import { mdiTwitter } from "@mdi/js";
 import { mdiInstagram } from "@mdi/js";
 import { mdiLinkedin } from "@mdi/js";
+import { Button } from "./ui/button";
+import { toast } from "./ui/use-toast";
 
 export default function Footer() {
+  const handleSubscribe = () => {
+    toast({
+      title: "You submitted successfully your email.",
+      description: "You will receive your coupon immediately.",
+    });
+  };
   return (
     <>
       <div className="flex min-h-96 flex-col border-t  bg-black text-white lg:flex-row lg:justify-between lg:px-16 lg:py-12">
@@ -36,12 +45,15 @@ export default function Footer() {
             <AccordionContent>
               <div className="px-4">
                 <p className="mb-2 text-xs">Get 10% off your first order</p>
-                <Input
-                  className="max-w-56"
-                  type="text"
-                  name="accordionEmailfield"
-                  placeholder="Enter your email"
-                />
+                <div className="flex gap-5">
+                  <Input
+                    className="max-w-56"
+                    type="text"
+                    name="accordionEmailfield"
+                    placeholder="Enter your email"
+                  />
+                  <Button onClick={handleSubscribe}>Subscribe</Button>
+                </div>
               </div>
             </AccordionContent>
           </AccordionItem>
@@ -192,7 +204,13 @@ export default function Footer() {
           <h1 className="mb-2 text-xl font-semibold">SatSch</h1>
           <h2 className="mb-2 text-lg">Subscribe</h2>
           <p className="mb-2 text-xs">Get 10% off your first order</p>
-          <Input type="text" name="emailfield" placeholder="Enter your email" />
+          <Input
+            className="mb-2"
+            type="text"
+            name="emailfield"
+            placeholder="Enter your email"
+          />
+          <Button onClick={handleSubscribe}>Subscribe</Button>
         </div>
 
         {/* Support */}
