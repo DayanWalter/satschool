@@ -12,7 +12,7 @@ export default function CheckoutButton() {
 
   const checkout = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/checkout", {
+      const response = await fetch(`${BASE_URL}/api/checkout`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ products: cart }),
