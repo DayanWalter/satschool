@@ -8,7 +8,7 @@ import { useCart } from "@/components/CartContext";
 import { Button } from "@/components/ui/button";
 
 export default function CheckoutButton() {
-  const BASE_URL = process.env.BASE_URL;
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
   const { cart } = useCart();
 
