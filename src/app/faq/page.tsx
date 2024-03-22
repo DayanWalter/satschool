@@ -58,7 +58,7 @@ export default function FAQ() {
               </AccordionTrigger>
               <AccordionContent>
                 <div className="px-4">
-                  No. This shop is just connected with Stripe.
+                  No. This shop is just connected with Stripe, and not real.
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -113,7 +113,7 @@ export default function FAQ() {
                   No, it is not wired to a service. Look at the{" "}
                   <Link
                     className="mb-2  underline underline-offset-4"
-                    href="https://github.com/DayanWalter/satschool/blob/722d0ed17934ff65a7567a121e021524d8c03a6d/src/app/contact/ContactForm.tsx#L60"
+                    href="https://github.com/DayanWalter/satschool/blob/9c8aa592524025a5c492f822f9acabe47aaba383/src/app/contact/ContactForm.tsx#L64"
                     target="_blank"
                   >
                     repo
