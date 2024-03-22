@@ -1,5 +1,9 @@
+// React
 import React from "react";
+
+// Shadcn
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 export default function ContactCard() {
   return (
     <div className="space-y-5">

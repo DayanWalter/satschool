@@ -1,8 +1,11 @@
 "use client";
 
+// React
+import React from "react";
+
+// Components
 import { useCart } from "@/components/CartContext";
 import { Button } from "@/components/ui/button";
-import React from "react";
 
 export default function CheckoutButton() {
   const { cart } = useCart();

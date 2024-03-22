@@ -1,11 +1,11 @@
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card";
-import Image from "next/image";
+// React
 import React from "react";
+
+// Next
+import Image from "next/image";
+
+// Shadcn
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function StatisticsCard({
   statistic,

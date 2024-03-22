@@ -1,4 +1,6 @@
+// React
 import React from "react";
+
 // Next
 import Link from "next/link";
 import { Slash } from "lucide-react";
@@ -12,7 +14,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Input } from "@/components/ui/input";
 import {
   Accordion,
   AccordionContent,

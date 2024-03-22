@@ -1,4 +1,7 @@
+// React
 import React from "react";
+
+// Components
 import StatisticsCard from "./StatisticsCard";
 
 export default function AboutStatistics() {

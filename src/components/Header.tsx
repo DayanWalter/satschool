@@ -1,11 +1,20 @@
 "use client";
+
+// React
 import React from "react";
+
+// Next
+import Link from "next/link";
+
+// Shadcn
 import { Button } from "@/components/ui/button";
 
-import Link from "next/link";
+// Icons
 import Icon from "@mdi/react";
 import { mdiCartOutline } from "@mdi/js";
 import { ModeToggle } from "./ModeToggle";
+
+// Context
 import { useCart } from "./CartContext";
 
 export default function Header() {

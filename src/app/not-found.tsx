@@ -1,7 +1,13 @@
 "use client";
+
+// React
 import React from "react";
 import { Slash } from "lucide-react";
 
+// Next
+import Link from "next/link";
+
+// Shadcn
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -11,7 +17,6 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 export default function NotFound() {
   return (

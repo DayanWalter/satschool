@@ -1,6 +1,8 @@
+// React
 import React from "react";
 import { Slash } from "lucide-react";
 
+// Shadcn
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -9,6 +11,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+
 export default function Privacy() {
   return (
     <>

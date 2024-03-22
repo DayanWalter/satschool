@@ -1,10 +1,13 @@
 "use client";
+
+// React
 import React from "react";
-import Icon from "@mdi/react";
-import { mdiArrowLeft } from "@mdi/js";
-import { mdiArrowRight } from "@mdi/js";
+
+// Components
 import ProductCard from "./ProductCard";
-import useFetchProducts from "@/hooks/useFetchProducts";
+
+// Fetch
+// import useFetchProducts from "@/hooks/useFetchProducts";
 
 export default function Products() {
   // const { data: products, error, loading } = useFetchProducts();

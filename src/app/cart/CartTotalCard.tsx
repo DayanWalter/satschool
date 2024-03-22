@@ -1,6 +1,9 @@
 "use client";
 
+// React
 import React from "react";
+
+// Shadcn
 import { Separator } from "@/components/ui/separator";
 import {
   Card,
@@ -10,6 +13,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
+// Components
 import CheckoutButton from "./CheckoutButton";
 
 export default function CartTotalCard({ subtotal }: { subtotal: number }) {

@@ -1,7 +1,13 @@
 "use client";
+
+// React
 import React from "react";
 import { Slash } from "lucide-react";
 
+// Next
+import Image from "next/image";
+
+// Shadcn
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -21,10 +27,11 @@ import {
   TableFooter,
 } from "@/components/ui/table";
 
-import { useCart } from "@/components/CartContext";
-import Image from "next/image";
-import CheckoutButton from "./CheckoutButton";
+// Components
 import CartTotalCard from "./CartTotalCard";
+
+// Context
+import { useCart } from "@/components/CartContext";
 
 export default function Cart() {
   const { cart, incrementQuantity, decrementQuantity, removeFromCart } =

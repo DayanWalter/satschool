@@ -1,13 +1,21 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
-
+// Globals
 import "./globals.css";
+import { Inter } from "next/font/google";
+
+// Next
+import type { Metadata } from "next";
+
+// Shadcn
+import { Toaster } from "@/components/ui/toaster";
+
+// Provider
+import { ThemeProvider } from "@/components/theme-provider";
+import { CartProvider } from "@/components/CartContext";
+
+// Components
 import TopHeader from "@/components/TopHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { CartProvider } from "@/components/CartContext";
-import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 

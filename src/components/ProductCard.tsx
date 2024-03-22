@@ -1,8 +1,17 @@
+// React
 import React, { useState } from "react";
-import Rating from "./Rating";
+
+// Next
 import Image from "next/image";
-import { useCart } from "./CartContext";
+
+// Shadcn
 import { toast } from "./ui/use-toast";
+
+// Context
+import { useCart } from "./CartContext";
+
+// Components
+import Rating from "./Rating";
 
 export default function ProductCard({ product }: { product: Product }) {
   const [isHovered, setIsHovered] = useState(false);
