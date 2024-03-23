@@ -35,17 +35,19 @@ export default function Footer() {
   };
   return (
     <>
-      <div className="flex min-h-96 flex-col border-t  bg-black text-white lg:flex-row lg:justify-between lg:px-16 lg:py-12">
+      <div className="flex min-h-96 flex-col border-t  bg-black  lg:flex-row lg:justify-between lg:px-16 lg:py-12">
         {/* Accordion */}
         <Accordion className="lg:hidden" type="single" collapsible>
           {/* Subscribe */}
           <AccordionItem value="subscribe">
             <AccordionTrigger>
-              <p className="px-2">Subscribe</p>
+              <p className="px-2 text-white">Subscribe</p>
             </AccordionTrigger>
             <AccordionContent>
               <div className="px-4">
-                <p className="mb-2 text-xs">Get 10% off your first order</p>
+                <p className="mb-2 text-xs text-white">
+                  Get 10% off your first order
+                </p>
                 <div className="flex gap-5">
                   <Input
                     className="max-w-56"
@@ -60,7 +62,7 @@ export default function Footer() {
           </AccordionItem>
 
           {/* Support */}
-          <AccordionItem value="support">
+          <AccordionItem value="support" className="text-white">
             <AccordionTrigger>
               <p className="px-2">Support</p>
             </AccordionTrigger>
@@ -76,7 +78,7 @@ export default function Footer() {
           </AccordionItem>
 
           {/* Account */}
-          <AccordionItem value="account">
+          <AccordionItem value="account" className="text-white">
             <AccordionTrigger>
               <p className="px-2">Account</p>
             </AccordionTrigger>
@@ -96,7 +98,7 @@ export default function Footer() {
           </AccordionItem>
 
           {/* Quick Link */}
-          <AccordionItem value="quick-link">
+          <AccordionItem value="quick-link" className="text-white">
             <AccordionTrigger>
               <p className="px-2">Quick Link</p>
             </AccordionTrigger>
@@ -134,7 +136,7 @@ export default function Footer() {
           </AccordionItem>
 
           {/* Donate Developer */}
-          <AccordionItem value="donate-developer">
+          <AccordionItem value="donate-developer" className="text-white">
             <AccordionTrigger>
               <div className="flex gap-2 px-2">
                 <p>Support the Developer</p>
@@ -203,8 +205,10 @@ export default function Footer() {
         {/* Subscribe */}
         <div className="hidden max-w-56 p-5 lg:block">
           <h1 className="mb-2 text-xl font-semibold">SatSch</h1>
-          <h2 className="mb-2 text-lg">Subscribe</h2>
-          <p className="mb-2 text-xs">Get 10% off your first order</p>
+          <h2 className="mb-2 text-lg text-white">Subscribe</h2>
+          <p className="mb-2 text-xs text-white">
+            Get 10% off your first order
+          </p>
           <Input
             className="mb-2"
             type="text"
@@ -215,7 +219,7 @@ export default function Footer() {
         </div>
 
         {/* Support */}
-        <div className="hidden p-5 lg:block">
+        <div className="hidden p-5 text-white lg:block">
           <h1 className="mb-2 text-xl font-semibold">Support</h1>
           <p className=" text-xs">25 Avenida Norte,</p>
           <p className=" text-xs">San Salvador,</p>
@@ -225,7 +229,7 @@ export default function Footer() {
         </div>
 
         {/* Account */}
-        <div className="hidden max-w-sm p-5 lg:block">
+        <div className="hidden max-w-sm p-5 text-white lg:block">
           <h1 className="mb-2 text-xl font-semibold">Account</h1>
           <div className="flex flex-col ">
             <Link
@@ -241,7 +245,7 @@ export default function Footer() {
         </div>
 
         {/* Quick Link */}
-        <div className="hidden max-w-sm p-5 lg:block">
+        <div className="hidden max-w-sm p-5 text-white lg:block">
           <h1 className="mb-2 text-xl font-semibold">Quick Link</h1>
           <div className="flex flex-col">
             <Link
@@ -275,7 +279,7 @@ export default function Footer() {
         </div>
 
         {/* Support Developer */}
-        <div className="hidden w-72 p-5 lg:block">
+        <div className="hidden w-72 p-5 text-white lg:block">
           <div className="mb-2 flex gap-3">
             <h1 className="text-xl font-semibold">Support the Dev</h1>
             <Icon color="red" path={mdiHeartOutline} size={1} />
