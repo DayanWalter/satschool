@@ -31,7 +31,7 @@ export default function Products() {
       image: "/advanced-bitcoin-techniques.png",
       quantityInCart: 0,
       rating: {
-        rate: 4.9,
+        rate: 3.9,
         count: 625,
       },
     },
@@ -42,7 +42,7 @@ export default function Products() {
       image: "/understanding-the-lightning-network.png",
       quantityInCart: 0,
       rating: {
-        rate: 4.7,
+        rate: 2.7,
         count: 125,
       },
     },
@@ -53,7 +53,7 @@ export default function Products() {
       image: "/bitcoin-mining-basics.png",
       quantityInCart: 0,
       rating: {
-        rate: 4.5,
+        rate: 1.5,
         count: 25,
       },
     },
@@ -64,7 +64,7 @@ export default function Products() {
       image: "/security-in-the-bitcoin-ecosystem.png",
       quantityInCart: 0,
       rating: {
-        rate: 4.8,
+        rate: 5,
         count: 50,
       },
     },
@@ -75,7 +75,7 @@ export default function Products() {
       image: "/developing-bitcoin-applications.png",
       quantityInCart: 0,
       rating: {
-        rate: 4.6,
+        rate: 3.6,
         count: 21,
       },
     },
@@ -97,7 +97,7 @@ export default function Products() {
       image: "/legal-aspects-of-bitcoin.png",
       quantityInCart: 0,
       rating: {
-        rate: 4.5,
+        rate: 0.5,
         count: 10,
       },
     },

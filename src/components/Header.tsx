@@ -51,8 +51,6 @@ export default function Header() {
         </Button>
         <ModeToggle />
       </div>
-      {/* <div>
-      </div> */}
     </div>
   );
 }
