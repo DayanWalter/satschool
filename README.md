@@ -4,11 +4,11 @@ SatSchool ist a full-stack project built with Next.js.
 
 The frontend is built with React, Tailwind CSS and shadcn/ui.
 
-The backend's purpose is to connect the frontend with [Stripe](https://stripe.com/)..
+The backend's purpose is to connect the frontend with [Stripe](https://stripe.com/).
 
 Hosted on [vercel.com](https://vercel.com/).
 
-Live Preview:[SatSchool](https://satschool.vercel.app/)
+Live Preview: [SatSchool](https://satschool.vercel.app/)
 
 <img src="public/satsch.webp" alt="SatSch Home view" width="100%">
 
@@ -16,13 +16,13 @@ Live Preview:[SatSchool](https://satschool.vercel.app/)
 
 SatSchool is an ecommerce site.
 
-The user can choose between various Bitcoin-related courses and items, adjust the quantity of items in the shopping cart, and complete the payment using Stripe at the end of the shopping process.
+The user can choose between various Bitcoin-related courses, adjust the quantity of the items in the shopping cart, and complete the payment using Stripe at the end of the shopping process.
 
 ### Features
 
 - **Add Items to your cart:** Place your items in a shoppingcart and proceed to checkout after you have everything you need.
 
-- **Pay with stripe:** Pay conveniently with [Stripe](https://stripe.com/).
+- **Pay with Stripe:** Pay conveniently with [Stripe](https://stripe.com/).
 
 - **Dark/Light Theme:** Choose between dark and light mode.
 
@@ -47,7 +47,6 @@ You can use the following credit card details:
 - CVC: 123
 - Name: Your Choice
 
-Example:
 <img src="public/stripepayment.webp" alt="Stripe payment" width="50%">
 
 ### Variables
