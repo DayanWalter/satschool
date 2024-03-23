@@ -10,7 +10,7 @@ Hosted on [vercel.com](https://vercel.com/).
 
 Live Preview:[SatSchool](https://satschool.vercel.app/)
 
-<img src="/satsch.webp" alt="SatSch Home view" width="100%">
+<img src="public/satsch.webp" alt="SatSch Home view" width="100%">
 
 ## About the project
 
@@ -48,7 +48,7 @@ You can use the following credit card details:
 - Name: Your Choice
 
 Example:
-<img src="/stripepayment.webp" alt="Stripe payment" width="100%">
+<img src="public/stripepayment.webp" alt="Stripe payment" width="100%">
 
 ### Variables
 
