@@ -204,7 +204,7 @@ export default function Footer() {
 
         {/* Subscribe */}
         <div className="hidden max-w-56 p-5 lg:block">
-          <h1 className="mb-2 text-xl font-semibold">SatSch</h1>
+          <h1 className="mb-2 text-xl font-semibold text-white">SatSch</h1>
           <h2 className="mb-2 text-lg text-white">Subscribe</h2>
           <p className="mb-2 text-xs text-white">
             Get 10% off your first order
