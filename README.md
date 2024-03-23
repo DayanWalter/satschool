@@ -48,7 +48,7 @@ You can use the following credit card details:
 - Name: Your Choice
 
 Example:
-<img src="public/stripepayment.webp" alt="Stripe payment" width="100%">
+<img src="public/stripepayment.webp" alt="Stripe payment" width="50%">
 
 ### Variables
 
