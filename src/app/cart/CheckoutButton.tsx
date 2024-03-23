@@ -8,17 +8,18 @@ import { useCart } from "@/components/CartContext";
 import { Button } from "@/components/ui/button";
 
 export default function CheckoutButton() {
-  const url = process.env.NEXT_PUBLIC_BASE_URL;
-
   const { cart } = useCart();
 
   const checkout = async () => {
     try {
-      const response = await fetch(`${url}/api/checkout`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ products: cart }),
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}api/checkout`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ products: cart }),
+        },
+      );
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
