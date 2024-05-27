@@ -17,6 +17,7 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   const [cart, setCart] = useState<Product[]>([]);
+
   const addToCart = (product: Product) => {
     const updatedCart = [...cart];
 
@@ -79,6 +80,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
 };
 export const useCart = (): CartContextType => {
   const context = useContext(CartContext);
+
   if (context === undefined) {
     throw new Error("useCart must be within a cartprovider");
   }
