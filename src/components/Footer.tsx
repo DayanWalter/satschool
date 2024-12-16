@@ -333,7 +333,7 @@ export default function Footer() {
       </div>
       {/* Licence */}
       <div className="flex  h-16 items-center justify-center bg-black text-sm text-white lg:border-t ">
-        <p className="mr-1 hidden sm:block">2024</p>
+        <p className="mr-1 hidden sm:block">{new Date().getFullYear()}</p>
         <Link href="https://dayanwalter.com/" target="_blank">
           <p className="mr-1 hidden sm:block">Dayan Walter.</p>
         </Link>
