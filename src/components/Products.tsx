@@ -13,7 +13,7 @@ export default function Products() {
   // const { data: products, error, loading } = useFetchProducts();
 
   return (
-    <div className="flex w-full flex-col">
+    <div className="flex w-full flex-col ">
       {/* Header section */}
       <div className="mb-14 ">
         <div className="mb-5 flex items-center gap-5">
