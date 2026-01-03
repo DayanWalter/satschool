@@ -1,23 +1,18 @@
 'use client';
 
 // React
-import React from 'react';
 
 // Next
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Shadcn
-import { Input } from '@/components/ui/input';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Input } from '@/components/ui/input';
 
 // Icons
+import { mdiFacebook, mdiHeartOutline, mdiInstagram, mdiLinkedin, mdiTwitter } from '@mdi/js';
 import Icon from '@mdi/react';
-import { mdiHeartOutline } from '@mdi/js';
-import { mdiFacebook } from '@mdi/js';
-import { mdiTwitter } from '@mdi/js';
-import { mdiInstagram } from '@mdi/js';
-import { mdiLinkedin } from '@mdi/js';
 import { Button } from './ui/button';
 import { toast } from './ui/use-toast';
 
@@ -258,7 +253,7 @@ export default function Footer() {
       </div>
       {/* Licence */}
       <div className='flex h-16 items-center justify-center bg-black text-sm text-white lg:border-t'>
-        <p className='mr-1 hidden sm:block'>{new Date().getFullYear()}</p>
+        <span className='mr-1 hidden sm:block'>&copy; {new Date().getFullYear()}</span>
         <Link href='https://dayanwalter.com/' target='_blank'>
           <p className='mr-1 hidden sm:block'>Dayan Walter.</p>
         </Link>
