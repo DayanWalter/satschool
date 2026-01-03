@@ -7,7 +7,7 @@ export default function TopHeader() {
   const [countdown, setCountdown] = useState("");
 
   useEffect(() => {
-    const futureDate = new Date("2024-12-31T23:59:59").getTime();
+    const futureDate = new Date("2026-12-31T23:59:59").getTime();
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const difference = futureDate - now;
