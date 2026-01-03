@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export default function useFetchProducts() {
   // Hooks
@@ -11,9 +11,7 @@ export default function useFetchProducts() {
     async function fetchData() {
       try {
         setLoading(true);
-        const response = await fetch(
-          `https://fakestoreapi.com/products?limit=8`,
-        );
+        const response = await fetch(`https://fakestoreapi.com/products?limit=8`);
 
         if (!response.ok) {
           throw new Error(`This is an HTTP error`);

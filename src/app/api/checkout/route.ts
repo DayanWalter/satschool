@@ -1,5 +1,5 @@
 // Next
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server';
 
 // Type
 interface Product {
@@ -18,7 +18,7 @@ interface StripeProduct {
 
 // Environment variables
 const url = process.env.NEXT_PUBLIC_CHECKOUT_URL;
-const stripe = require("stripe")(process.env.STRIPE_SECRET);
+const stripe = require('stripe')(process.env.STRIPE_SECRET);
 
 // Return active products from stripe
 const getActiveProducts = async () => {
@@ -32,26 +32,18 @@ const createStripeProduct = async (product: Product) => {
     name: product.title,
     default_price_data: {
       unit_amount: Math.round(product.price * 100),
-      currency: "usd",
+      currency: 'usd',
     },
   });
 };
 
 // Find corresponding Stripe product
-const findStripeProduct = (
-  activeProducts: StripeProduct[],
-  product: Product,
-) => {
-  return activeProducts.find(
-    (prod) => prod?.name?.toLowerCase() === product?.title?.toLowerCase(),
-  );
+const findStripeProduct = (activeProducts: StripeProduct[], product: Product) => {
+  return activeProducts.find((prod) => prod?.name?.toLowerCase() === product?.title?.toLowerCase());
 };
 
 // Create Stripe items for the checkout session
-const createStripeItems = (
-  products: Product[],
-  activeProducts: StripeProduct[],
-) => {
+const createStripeItems = (products: Product[], activeProducts: StripeProduct[]) => {
   return products
     .map((product) => {
       const stripeProduct = findStripeProduct(activeProducts, product);
@@ -82,17 +74,14 @@ export const POST = async (request: Request) => {
 
     const session = await stripe.checkout.sessions.create({
       line_items: stripeItems,
-      mode: "payment",
+      mode: 'payment',
       success_url: `${url}success`,
       cancel_url: `${url}cancel`,
     });
 
     return NextResponse.json({ url: session.url });
   } catch (error) {
-    console.error("Error in processing request", error);
-    return NextResponse.json(
-      { error: "Error in processing request" },
-      { status: 500 },
-    );
+    console.error('Error in processing request', error);
+    return NextResponse.json({ error: 'Error in processing request' }, { status: 500 });
   }
 };

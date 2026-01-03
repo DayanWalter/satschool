@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
 // React
-import React from "react";
-import { Slash } from "lucide-react";
+import React from 'react';
+import { Slash } from 'lucide-react';
 
 // Shadcn
 import {
@@ -12,21 +12,21 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+} from '@/components/ui/breadcrumb';
 
 // Components
-import ContactCard from "./ContactCard";
-import ContactForm from "./ContactForm";
+import ContactCard from './ContactCard';
+import ContactForm from './ContactForm';
 
 export default function Contact() {
   return (
     <>
       {/* Navigation Breadcrumb */}
-      <div className="p-5 lg:mb-5 lg:pl-24 lg:pt-24 ">
+      <div className='p-5 lg:mb-5 lg:pl-24 lg:pt-24'>
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              <BreadcrumbLink href='/'>Home</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator>
               <Slash />
@@ -37,8 +37,8 @@ export default function Contact() {
           </BreadcrumbList>
         </Breadcrumb>
       </div>
-      <main className="flex min-h-screen flex-col items-center justify-between p-5 lg:p-24">
-        <div className="flex w-full flex-col justify-around space-y-5 md:items-center lg:flex-row lg:-space-y-0">
+      <main className='flex min-h-screen flex-col items-center justify-between p-5 lg:p-24'>
+        <div className='flex w-full flex-col justify-around space-y-5 md:items-center lg:flex-row lg:-space-y-0'>
           <ContactCard />
           <ContactForm />
         </div>

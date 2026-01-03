@@ -1,6 +1,6 @@
-"use client";
+'use client';
 // React
-import React, { createContext, ReactNode, useContext, useState } from "react";
+import React, { createContext, ReactNode, useContext, useState } from 'react';
 interface CartContextType {
   cart: Product[];
   addToCart: (product: Product) => void;
@@ -44,9 +44,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   };
   const incrementQuantity = (productId: number) => {
     const updatedCart = cart.map((item) =>
-      item.id === productId
-        ? { ...item, quantityInCart: item.quantityInCart + 1 }
-        : item,
+      item.id === productId ? { ...item, quantityInCart: item.quantityInCart + 1 } : item,
     );
     setCart(updatedCart);
   };
@@ -55,8 +53,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
       item.id === productId
         ? {
             ...item,
-            quantityInCart:
-              item.quantityInCart > 0 ? item.quantityInCart - 1 : 0,
+            quantityInCart: item.quantityInCart > 0 ? item.quantityInCart - 1 : 0,
           }
         : item,
     );
@@ -82,7 +79,7 @@ export const useCart = (): CartContextType => {
   const context = useContext(CartContext);
 
   if (context === undefined) {
-    throw new Error("useCart must be within a cartprovider");
+    throw new Error('useCart must be within a cartprovider');
   }
   return context;
 };
